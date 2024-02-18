@@ -1,0 +1,1138 @@
+﻿@{
+    Layout = "";
+}
+@model HomePageModel
+@inject Microsoft.AspNetCore.Identity.SignInManager<ApplicationUser> signInManager
+@{ ViewData["Title"] = "Home Page";
+    var userName = User.Identity.Name; }
+<!DOCTYPE html>
+<html class="dark history svg video supports boxshadow csstransforms3d csstransitions backgroundcliptext webkit chrome win js sticky-header-enabled">
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Porto - Responsive HTML5 Template</title>
+
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Porto - Responsive HTML5 Template">
+    <meta name="author" content="okler.net">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="~/img/apple-touch-icon.png">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <link href="~/css/site1.min.css" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="~/css/theme-elements.css">
+
+    <link href="~/css/site2.min.css" rel="stylesheet" />
+
+    <!-- Head Libs -->
+    <script src="~/vendor/modernizr/modernizr.min.js"></script>
+    <style>
+
+/*
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}*/
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.bgimg-1 {
+  background-image: url('@Url.Content("~/img/slides/10.jpg")');
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url('@Url.Content("~/img/slides/10.jpg")');
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url('@Url.Content("~/img/slides/2.jpg")');
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+        /* Button used to open the chat form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup chat - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+            /* Full-width textarea */
+            .form-container textarea {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                border: none;
+                background: #f1f1f1;
+                resize: none;
+                min-height: 200px;
+            }
+
+                /* When the textarea gets focus, do something */
+                .form-container textarea:focus {
+                    background-color: #ddd;
+                    outline: none;
+                }
+
+            /* Set a style for the submit/login button */
+            .form-container .btn {
+                background-color: #04AA6D;
+                color: white;
+                padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                margin-bottom: 10px;
+                opacity: 0.8;
+            }
+
+            /* Add a red background color to the cancel button */
+            .form-container .cancel {
+                background-color: red;
+            }
+
+            /* Add some hover effects to buttons */
+            .form-container .btn:hover, .open-button:hover {
+                opacity: 1;
+            }
+
+        .myForm {
+            display: none;
+        }
+
+        .containers {
+            border: 2px solid #dedede;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .darkers {
+            border-color: #ccc;
+            background-color: #ddd;
+        }
+
+        .containers::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+
+
+        .time-right {
+            float: right;
+            color: #aaa;
+        }
+
+        .time-left {
+            float: left;
+            color: #999;
+        }
+
+@*/* Turn off parallax
+    ing for tablets and phones */
+@ only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+}*@
+    </style>
+
+</head>
+<body data-plugin-page-transition class="loading-overlay-showing" data-loading-overlay data-plugin-options="{'hideDelay': 500, 'effect': 'default'}">
+    <a class="far fa-comment fa-5x" style=" color: red; position: fixed; z-index:2; top: 90%; left: 80%;   " onclick="openForm()"></a>
+    @*<a class="far fa-comment fa-5x" style=" color: red; position: fixed; z-index:2; top: 90%; left: 80%;   " asp-controller="Home" asp-action="NewChat7"></a>*@
+    <div class="loading-overlay">
+        <div class="bounce-loader">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <div class="body">
+        <header id="header" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyStartAt': 45, 'stickySetTop': '-45px', 'stickyChangeLogo': true}">
+            <div class="header-body">
+                <div class="header-container container">
+                    <div class="header-row">
+                        <div class="header-column">
+                            <div class="header-row">
+                                <div class="header-logo">
+                                    <a href="/">
+                                        <img alt="Porto" width="100" height="48" data-sticky-width="82" data-sticky-height="40" data-sticky-top="25" src="/img/logo-default-slim.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-column justify-content-end">
+                            <div class="header-row pt-3">
+                                <nav class="header-nav-top">
+                                    <ul class="nav nav-pills">
+                                        @*<li class="nav-item nav-item-anim-icon d-none d-md-block">
+
+
+
+                                            <a class="nav-link ps-0" href="/Home/AboutUs"><i class="fas fa-angle-right"></i> About Us</a>
+                                        </li>
+
+
+
+
+
+
+
+
+                                        <li class="nav-item nav-item-anim-icon d-none d-md-block">
+                                            <a class="nav-link" href="/Home/ContactUs"><i class="fas fa-angle-right"></i> Contact Us</a>
+                                        </li>
+                                        <li class="nav-item nav-item-left-border nav-item-left-border-remove nav-item-left-border-md-show">
+                                            <span class="ws-nowrap"><i class="fas fa-phone"></i> (123) 456-789</span>
+                                        </li>*@
+                                      
+                                    </ul>
+                                </nav>
+                                <div class="header-nav-features">
+                                    <div class="header-nav-feature header-nav-features-search d-inline-flex">
+                                        <div class="navbar-header" style="display:none;">
+                                            <span class="noti glyphicon glyphicon-bell"><span class="count"></span></span>
+                                            <div class="noti-content" style="width: 300px;">
+                                                <div class="noti-top-arrow"></div>
+
+                                                <ul id="noticontent">
+                                                </ul>
+
+                                            </div>
+                                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                    @*<div class="header-nav-feature header-nav-features-search d-inline-flex">
+            <a href="#" class="header-nav-features-toggle text-decoration-none" data-focus="headerSearch"><i class="fas fa-search header-nav-top-icon"></i></a>
+            <div class="header-nav-features-dropdown" id="headerTopSearchDropdown">
+                <form role="search" action="page-search-results.html" method="get">
+                    <div class="simple-search input-group">
+                        <input class="form-control text-1" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
+                        <button class="btn" type="submit">
+                            <i class="fas fa-search header-nav-top-icon"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>*@
+                                    @*<div class="header-nav-feature header-nav-features-cart d-inline-flex ms-2">
+            <a href="#" class="header-nav-features-toggle">
+                <img src="~/img/icons/icon-cart.svg" width="14" alt="" class="header-nav-top-icon-img">
+                @if (Model.Cart != null)
+                {
+                    <span class="cart-info">
+                        <span class="cart-qty">@Model.Cart.Count</span>
+                    </span>
+                }
+                else
+                {
+                    <span class="cart-info">
+                        <span class="cart-qty">0</span>
+                    </span>
+                }
+
+            </a>
+            <div class="header-nav-features-dropdown" id="headerTopCartDropdown">
+                @if (Model.Cart != null)
+                {
+                    @foreach (var item in Model.Cart.LstServices)
+                    {
+                        <ol class="mini-products-list">
+                            <li class="item">
+                                <a href="#" title="Camera X1000" class="product-image"><img src="@string.Format("/Uploads/{0}" , item.Path)" alt="Camera X1000"></a>
+                                <div class="product-details">
+                                    <p class="product-name">
+                                        <a href="#">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.TitleEn : item.TitleFr)</a>
+                                    </p>
+                                    <p class="qty-price">
+                                        @item.Qty X <span class="price">$@item.Price</span>
+                                    </p>
+                                    <a asp-controller="ServiceDetails" asp-action="RemoveFromCart" asp-route-id="@item.ServiceId" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
+                                </div>
+                            </li>
+                        </ol>
+
+                    }
+                }
+                @if (Model.Cart != null)
+                {
+                    <div class="totals">
+                        <span class="label"><h5 class="text-uppercase mb-4 font-weight-bold text-3">@VipAssistProject.Resources.ResWebsite.lbTotal:</h5></span>
+                        <span class="price-total"><span class="price"> <h5 class="text-uppercase mb-4 font-weight-bold text-3">$@Model.Cart.Total</h5></span></span>
+
+                    </div>
+                    <div class="actions">
+                        <a class="btn btn-dark" asp-controller="Order" asp-action="Cart" style="font-size:10px;">@VipAssistProject.Resources.ResWebsite.lbView_Cart</a>
+                        <a class="btn btn-primary" asp-controller="Order" asp-action="CheckOut" style="font-size:10px;">@VipAssistProject.Resources.ResWebsite.lbCheckout</a>
+                    </div>
+                }
+                else
+                {
+                    <div class="totals">
+                        <span class="label"><h5 class="text-uppercase mb-4 font-weight-bold text-3">@VipAssistProject.Resources.ResWebsite.lbTotal:</h5></span>
+
+                        <span class="price-total"><span class="price"> <h5 class="text-uppercase mb-4 font-weight-bold text-3">$0</h5></span></span>
+
+
+                    </div>
+
+                }
+
+
+
+            </div>
+        </div>*@
+                                    @if (signInManager.IsSignedIn(User))
+                                    {
+                                        <div class="header-nav-feature header-nav-features-user header-nav-features-user-logged d-inline-flex mx-2 pe-2" id="headerAccount">
+                                            <a href="#" class="header-nav-features-toggle">
+                                                <i style="font-family: 'Poppins', sans-serif; line-height: 1.6;color:white;">@Model.UserData.Where(a => a.UserName == User.Identity.Name).FirstOrDefault().UserName</i>
+                                            </a>
+                                            <div class="header-nav-features-dropdown header-nav-features-dropdown-mobile-fixed header-nav-features-dropdown-force-right" id="headerTopUserDropdown">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <p class="mb-0 pb-0 text-2 line-height-1 pt-1">Hello,</p>
+                                                        <p><strong class="text-color-dark text-4">@Model.UserData.Where(a => a.UserName == User.Identity.Name).FirstOrDefault().UserName</strong></p>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="d-flex justify-content-end">
+                                                            <img class="rounded-circle" width="40" height="40" alt="" src="~/img/avatars/avatar.jpg">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <ul class="nav nav-list-simple flex-column text-3">
+
+                                                            <li class="nav-item"><a class="nav-link" asp-controller="Order" asp-action="CustomerInvoicesHistory">@VipAssistProject.Resources.ResWebsite.lbMy_Orders</a></li>
+                                                            <li class="nav-item"><a class="nav-link border-bottom-0" asp-controller="User" asp-action="LogOut">@VipAssistProject.Resources.ResWebsite.lbLog_Out</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    }
+                                    @if (!signInManager.IsSignedIn(User))
+                                    {
+                                        <div class="header-nav-feature header-nav-features-user d-inline-flex mx-2 pe-2 signin" id="headerAccount">
+                                            <a href="#" class="header-nav-features-toggle">
+                                                <i class="far fa-user"></i> <span style="font-family: 'Poppins', sans-serif; line-height: 1.6;color:white;">@VipAssistProject.Resources.ResWebsite.lbSign_In</span>
+                                            </a>
+                                            <div class="header-nav-features-dropdown header-nav-features-dropdown-mobile-fixed header-nav-features-dropdown-force-right" id="headerTopUserDropdown">
+                                                <div class="signin-form">
+                                                    <h5 class="text-uppercase mb-4 font-weight-bold text-3">@VipAssistProject.Resources.ResWebsite.lbSign_In</h5>
+                                                    <form asp-controller="User" asp-action="SignIn" method="post" role="form">
+                                                        <div class="form-group">
+                                                            <label class="form-label mb-1 text-2"><p class="m-0">@VipAssistProject.Resources.ResWebsite.lbEmail_address* </p></label>
+
+                                                            <input asp-for="@Model.Email" type="email" class="form-control form-control-lg">
+                                                            <span>@ViewBag.one</span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="form-label mb-1 text-2"><p class="m-0">@VipAssistProject.Resources.ResWebsite.lbPassword * </p></label>
+
+                                                            <input asp-for="@Model.Password" type="password" class="form-control form-control-lg">
+                                                        </div>
+                                                        <div class="row pb-2">
+                                                            @*<div class="form-group form-check col-lg-6 ps-1">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="rememberMeCheck">
+                                        <label class="form-label custom-control-label text-2" for="rememberMeCheck">@VipAssistProject.Resources.ResWebsite.lbRemember_Me</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-6 text-end">
+                                    <a class="text-uppercase text-1 font-weight-bold text-color-dark" id="headerRecover" href="#">@VipAssistProject.Resources.ResWebsite.lbLOST_YOUR_PASSWORD_</a>
+                                </div>*@
+                                                        </div>
+                                                        <div class="actions">
+                                                            <div class="row">
+                                                                <div class="col d-flex justify-content-end">
+                                                                    <input type="hidden" asp-for="@Model.ReturnUrl" />
+                                                                    <input class="btn btn-primary" type="submit" style="font-size:10px;" value=@VipAssistProject.Resources.ResWebsite.lbLog_In />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
+                                                    <div class="extra-actions">
+                                                        <a asp-controller="User" asp-action="LogIn">@VipAssistProject.Resources.ResWebsite.lbDon_t_have_an_account_yet__SIGN_UP </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="signup-form">
+                                                    <h5 class="text-uppercase mb-4 font-weight-bold text-3">Sign Up</h5>
+                                                    <form asp-controller="User" asp-action="Register" method="post" role="form">
+                                                        <div class="form-group">
+                                                            <label class="form-label mb-1 text-2 opacity-8">@VipAssistProject.Resources.ResWebsite.lbEmail_address* </label>
+                                                            <input asp-for="@Model.user.Email" type="email" class="form-control form-control-lg">
+                                                            <span asp-validation-for="@Model.user.Email"></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="form-label mb-1 text-2 opacity-8">@VipAssistProject.Resources.ResWebsite.lbPassword *</label>
+                                                            <input asp-for="@Model.user.Password" type="password" class="form-control form-control-lg">
+                                                            <span asp-validation-for="@Model.user.Password"></span>
+                                                        </div>
+                                                        @*<div class="form-group">
+                                <label class="form-label mb-1 text-2 opacity-8">Re-enter Password *</label>
+                                <input type="password" class="form-control form-control-lg">
+                            </div>*@
+                                                        <div class="actions">
+                                                            <div class="row">
+                                                                <div class="col d-flex justify-content-end">
+                                                                    <input type="submit" value="Register" class="btn btn-primary" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="extra-actions">
+                                                            <p>@VipAssistProject.Resources.ResWebsite.lbAlready_have_an_account_<a href="#" id="headerSignIn" class="text-uppercase text-1 font-weight-bold text-color-dark">@VipAssistProject.Resources.ResWebsite.lbLog_In</a></p>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <div class="recover-form">
+                                                    <h5 class="text-uppercase mb-2 pb-1 font-weight-bold text-3">@VipAssistProject.Resources.ResWebsite.lbReset_My_Password</h5>
+                                                    <p class="text-2 mb-4">@VipAssistProject.Resources.ResWebsite.lbComplete_the_form_below_to_receive_an_email_with_the_authorization_code_needed_to_reset_your_password_</p>
+
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <label class="form-label mb-1 text-2 opacity-8">@VipAssistProject.Resources.ResWebsite.lbEmail_address* </label>
+                                                            <input type="email" class="form-control form-control-lg">
+                                                        </div>
+                                                        <div class="actions">
+                                                            <div class="row">
+                                                                <div class="col d-flex justify-content-end">
+                                                                    <a class="btn btn-primary" href="#">@VipAssistProject.Resources.ResWebsite.lbReset_My_Password</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="extra-actions">
+                                                            <p>@VipAssistProject.Resources.ResWebsite.lbAlready_have_an_account_<a href="#" id="headerRecoverCancel" class="text-uppercase text-1 font-weight-bold text-color-dark">@VipAssistProject.Resources.ResWebsite.lbLog_In</a></p>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    }
+
+
+
+                                </div>
+                            </div>
+                            <div class="header-row">
+                                <div class="header-nav pt-1">
+                                    <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1">
+                                        <nav class="collapse">
+                                            <ul class="nav nav-pills" id="mainNav">
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle active" href="/">
+                                                        Home
+                                                    </a>
+
+
+                                                </li>
+
+
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle" href="#">
+                                                        Services
+                                                    </a>
+                                                    <ul class="dropdown-menu">
+                                                        <li class="dropdown-submenu">
+
+                                                            <a class="dropdown-item" href="/ServiceDetails/Test2/e992a21c-11a4-430e-babb-764f74955b80"> AIRPORT BY INVITATION</a>
+
+                                                        </li>
+                                                        <li class="dropdown-submenu">
+
+                                                            <a class="dropdown-item" href="/ServiceDetails/Test2/54c1bacb-a8b7-49ac-ac9a-c2e6aa15389a"> MEET AND GREET</a>
+
+                                                        </li>
+                                                        <li class="dropdown-submenu">
+
+                                                            <a class="dropdown-item" href="/ServiceDetails/Test2/e5fbc6ff-c3e7-4126-b3e9-d0f5555c35c3"> MEDICAL ASSIST</a>
+
+                                                        </li>
+                                                        <li class="dropdown-submenu">
+
+                                                            <a class="dropdown-item" href="/ServiceDetails/Test2/80fd46a2-64c2-4edd-aea3-650b5ef75cb4"> Air Transportation</a>
+
+                                                        </li>
+                                                        <li class="dropdown-submenu">
+
+                                                            <a class="dropdown-item" href="/ServiceDetails/Test2/125b996d-c2ec-41c2-bee8-b60de52546a2"> CAR TRANSPORTATION</a>
+
+                                                        </li>
+                                                        <li class="dropdown-submenu">
+
+                                                            <a class="dropdown-item" href="/ServiceDetails/Test2/4c040b70-eeed-4e36-8899-bd9f7d6d3afb"> Security Arrangement</a>
+
+                                                        </li>
+
+
+
+
+
+
+
+
+
+
+                                                    </ul>
+                                                </li>
+
+
+
+
+
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle" href="/Home/AboutUs">
+                                                        About Us
+                                                    </a>
+
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle" href="/Home/ContactUs">
+                                                        Contact Us
+                                                    </a>
+
+                                                </li>
+
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle" href="/Home/Locations">
+                                                        Locations
+                                                    </a>
+
+                                                </li>
+                                                <li class="last">
+                                                    <div class="header_top_lang_widget_home1">
+                                                        <select class="selectpicker show-tick" onchange="onCompanyChanged()">
+                                                            <option class="language_test">Language</option>
+                                                            <option class="language_test">English</option>
+                                                            <option class="language_test">le fran&#xE7;ais</option>
+                                                        </select>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                           
+                                        </nav>
+                                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <div style="align-items"></div>
+
+
+
+
+
+
+
+
+
+                                    <button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
+                                        <i class="fas fa-bars"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </header>
+
+        <div class="owl-carousel-wrapper position-relative" style="height: 670px">
+            <div class="owl-carousel-loader">
+                <div class="bounce-loader">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+            </div>
+            <div class="owl-carousel dots-inside dots-horizontal-center show-dots-hover nav-inside nav-inside-plus nav-dark nav-md nav-font-size-md show-nav-hover mb-0" data-plugin-options="{'responsive': {'0': {'items': 1}, '479': {'items': 1}, '768': {'items': 1}, '979': {'items': 1}, '1199': {'items': 1}}, 'loop': false, 'autoHeight': false, 'margin': 0, 'dots': true, 'dotsVerticalOffset': '-75px', 'nav': true, 'animateIn': 'fadeIn', 'animateOut': 'fadeOut', 'mouseDrag': false, 'touchDrag': false, 'pullDrag': false, 'autoplay': true, 'autoplayTimeout': 9000, 'autoplayHoverPause': true, 'rewind': true}">
+
+                <!-- Carousel Slide 1 -->
+                @*<div class="position-relative" data-dynamic-height="['670px','670px','670px','550px','500px']" style="background-image: url(img/slides/10.jpg); background-size: cover; background-position: center; height: 670px;">
+                        <div class="position-absolute top-0 right-0 w-50pct w-lg-auto">
+                            <img src="~/img/slides/10.jpg" class="w-100 appear-animation" data-appear-animation="fadeInLeftDownShorter" data-appear-animation-delay="500" alt="">
+                        </div>
+                        <div class="position-absolute top-50pct left-0 transform3dy-n50 w-50pct w-lg-auto">
+                            <img src="~/img/slides/10.jpg" class="w-100 appear-animation" data-appear-animation="fadeInRightDownShorter" data-appear-animation-delay="1000" alt="">
+                        </div>
+                        <div class="position-absolute transform3dy-n50">
+                            <img src="~/img/slides/10.png" class="w-75 appear-animation" data-appear-animation="fadeInRightDownShorter" data-appear-animation-delay="1500" alt="" style="top: 20%; left: -20%;" data-plugin-options="{'forceAnimation': true}">
+                        </div>
+
+                        <div class="container position-relative z-index-1 h-100">
+                            <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                                <h3 class="position-relative text-color-light text-5 line-height-5 font-weight-medium px-4 mb-2 appear-animation" data-appear-animation="fadeInDownShorter" data-plugin-options="{'minWindowWidth': 0}">
+                                    <span class="position-absolute right-100pct top-50pct transform3dy-n50 opacity-3">
+                                        <img src="~/img/slides/1.png" class="w-auto appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                                    </span>
+                                    DO YOU NEED A <span class="position-relative">NEW <span class="position-absolute left-50pct transform3dx-n50 top-0 mt-4"><img src="img/slides/10.png" class="w-auto appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="1000" data-plugin-options="{'minWindowWidth': 0}" alt="" /></span></span>
+                                    <span class="position-absolute left-100pct top-50pct transform3dy-n50 opacity-3">
+                                        <img src="~/img/slides/2.png" class="w-auto appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                                    </span>
+
+                                </h3>
+                                <h1 class="text-color-light font-weight-extra-bold text-12 mb-3 appear-animation" data-appear-animation="blurIn" data-appear-animation-delay="500" data-plugin-options="{'minWindowWidth': 0}">WEB DESIGN?</h1>
+                                <p class="text-4 text-color-light font-weight-light opacity-7 mb-0" data-plugin-animated-letters data-plugin-options="{'startDelay': 1000, 'minWindowWidth': 0}">Check out our options and features</p>
+                            </div>
+                        </div>
+                    </div>*@
+
+                <!-- Carousel Slide 2 -->
+                @foreach (var item in Model.LstSliderImages.Where(a => a.CurrentState == 1).OrderBy(a => a.ImageOrder))
+                {
+                    <div class="position-relative overlay overlay-show overlay-op-8" data-dynamic-height="['670px','670px','670px','550px','500px']" style="background-image: url(@string.Format("/Uploads/{0}",item.ImagePath)); background-size: cover; background-position: center; height: 670px;">
+                        <div class="container position-relative z-index-3 h-100">
+                            <div class="row justify-content-center align-items-center h-100">
+                                <div class="col-lg-6">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <h3 class="position-relative text-color-light text-5 line-height-5 font-weight-medium px-4 mb-2 appear-animation" data-appear-animation="fadeInDownShorter" data-plugin-options="{'minWindowWidth': 0}">
+                                            <span class="position-absolute right-100pct top-50pct transform3dy-n50 opacity-3">
+                                                <img src="~/img/slides/2.png" class="w-auto appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                                            </span>
+                                            @VipAssistProject.Resources.ResWebsite.lbVipair
+                                            <span class="position-absolute left-100pct top-50pct transform3dy-n50 opacity-3">
+                                                @*<img src="@string.Format("/Uploads/{0}",item.ImagePath)" class="w-auto appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />*@
+
+                                            </span>
+                                        </h3>
+                                        <h2 class="text-color-light font-weight-extra-bold text-12 mb-3 appear-animation" data-appear-animation="blurIn" data-appear-animation-delay="500" data-plugin-options="{'minWindowWidth': 0}">@VipAssistProject.Resources.ResWebsite.lbMeet and Greet Service</h2>
+                                        <p class="text-4 text-color-light font-weight-light opacity-7 text-center mb-0" data-plugin-animated-letters data-plugin-options="{'startDelay': 1000, 'minWindowWidth': 0, 'animationSpeed': 30}">@VipAssistProject.Resources.ResWebsite.lbTrusted <strong class="text-color-light">40,000</strong> @VipAssistProject.Resources.ResWebsite.lbSatisfied</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+                <!--Carousel Slide 3 -->
+                @*<div class="position-relative overlay overlay-show overlay-op-8" data-dynamic-height="['670px','670px','670px','550px','500px']" style="background-image: url(img/slides/10.jpg); background-size: cover; background-position: center; height: 670px; ">
+                        <div class="container position-relative z-index-3 h-100">
+                            <div class="row justify-content-center align-items-center h-100">
+                                <div class="col-lg-6">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <h3 class="position-relative text-color-light text-4 line-height-5 font-weight-medium px-4 mb-2 appear-animation" data-appear-animation="fadeInDownShorter" data-plugin-options="{'minWindowWidth': 0}">
+                                            <span class="position-absolute right-100pct top-50pct transform3dy-n50 opacity-3">
+                                                <img src="~/img/slides/slide-title-border.png" class="w-auto appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                                            </span>
+                                            WE CREATE DESIGNS, WE ARE
+                                            <span class="position-absolute left-100pct top-50pct transform3dy-n50 opacity-3">
+                                                <img src="~/img/slides/slide-title-border.png" class="w-auto appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                                            </span>
+                                        </h3>
+                                        <h2 class="porto-big-title text-color-light font-weight-extra-bold mb-3" data-plugin-animated-letters data-plugin-options="{'startDelay': 1000, 'minWindowWidth': 0, 'animationSpeed': 300, 'animationName': 'fadeInRightShorterOpacity', 'letterClass': 'd-inline-block'}">PORTO</h2>
+                                        <p class="text-4 text-color-light font-weight-light text-center mb-0" data-plugin-animated-letters data-plugin-options="{'startDelay': 2000, 'minWindowWidth': 0}">The best choice for your new website</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+
+                <!--Carousel Slide 4 -->
+                @*<div class="position-relative pt-5" style="background-image: url(img/slides/10.jpg);background-repeat: no-repeat;background-size: cover;height: 100vh;">
+                        <div class="position-absolute top-0 left-0 w-50pct w-lg-auto z-index-2">
+                            <img src="~/img/slides/10.jpg" class="w-100 appear-animation" data-appear-animation="fadeInRightDownShorter" data-appear-animation-delay="500" alt="">
+                        </div>
+                        <div class="position-absolute top-0 right-0 w-50pct w-lg-auto z-index-2">
+                            <img src="~/img/slides/2.jpg" class="w-100 appear-animation" data-appear-animation="fadeInLeftDownShorter" data-appear-animation-delay="500" alt="">
+                        </div>
+                        <div class="position-absolute bottom-0 left-0 w-50pct w-lg-auto z-index-2">
+                            <img src="~/img/slides/3.jpg" class="w-100 appear-animation" data-appear-animation="fadeInRightUpShorter" data-appear-animation-delay="500" alt="">
+                        </div>
+                        <div class="position-absolute bottom-0 right-0 w-50pct w-lg-auto z-index-2">
+                            <img src="~/img/slides/10.jpg" class="w-100 appear-animation" data-appear-animation="fadeInLeftUpShorter" data-appear-animation-delay="500" alt="">
+                        </div>
+
+                        <div class="container position-relative z-index-3 h-100">
+                            <div class="row justify-content-center align-items-center h-100">
+                                <div class="col-lg-6">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <h3 class="position-relative text-color-light text-4 line-height-5 font-weight-medium px-4 mb-3 appear-animation" data-appear-animation="fadeInDownShorterPlus" data-plugin-options="{'minWindowWidth': 0}">
+                                            <span class="position-absolute right-100pct top-50pct transform3dy-n50 opacity-3">
+                                                <img src="~/img/slides/10.png" class="w-auto appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                                            </span>
+                                            WE WORK HARD AND PORTO HAS
+                                            <span class="position-absolute left-100pct top-50pct transform3dy-n50 opacity-3">
+                                                <img src="~/img/slides/10.png" class="w-auto appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                                            </span>
+                                        </h3>
+                                        <h2 class="text-color-light font-weight-extra-bold text-12 mb-4 appear-animation" data-appear-animation="blurIn" data-appear-animation-delay="500" data-plugin-options="{'minWindowWidth': 0}">
+                                            THE <span class="position-relative">BEST<span class="position-absolute left-50pct transform3dx-n50 bottom-0"><img src="img/slides/slide-blue-line-big.png" class="w-auto appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="1000" data-plugin-options="{'minWindowWidth': 0}" alt="" /></span></span> DESIGN
+                                        </h2>
+                                        <p class="text-4 text-color-light font-weight-light opacity-7 text-center mt-2 mb-4" data-plugin-animated-letters data-plugin-options="{'startDelay': 1000, 'minWindowWidth': 0, 'animationSpeed': 25}">Trusted by over <strong class="text-color-light">40,000</strong> satisfied users, Porto is a huge success in the one of larest world's MarketPlace</p>
+                                        <a href="#" class="btn btn-primary btn-rounded font-weight-bold text-3 px-5 py-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600">GET STARTED NOW!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+            </div>
+        </div>
+        @if (signInManager.IsSignedIn(User))
+        {
+            <div style=" background-color:white;border: solid; color: red; position: fixed; z-index: 2; top: 20%; left: 60%; width: 600px; height: 500px; overflow: scroll; display: none;" class="chat-popup" id="myForm">
+
+
+                <div class="row" style="margin:20px;">
+                    <div class="col-md-6" id="chat">
+                        @if (Model.LstChats.ToList().Count > 0)
+                        {
+                            @foreach (var message in Model.LstChats.OrderBy(m => m.CreatedDate))
+                            {
+                                string containerClass, timePosition, textAlign, contcolor, offset;
+                                if (userName == message.UpdatedBy)
+                                {
+                                    containerClass = "containers darkers";
+                                    timePosition = "time-right";
+
+                                }
+                                else
+                                {
+                                    containerClass = "containers";
+                                    timePosition = "time-left";
+
+                                }
+
+                                <div class="row">
+                                    <div class="@containerClass">
+
+
+                                        <p>@message.UpdatedBy</p>
+                                        <p>@message.MessageText</p>
+                                        <span class="@timePosition">@message.CreatedDate.ToString("M/dd/yyyy hh:MM tt")</span>
+
+                                    </div>
+                                </div>}}
+                    </div>
+                    <div class="col-md-12">
+                        <p style="display:none">@ViewBag.Tosend</p>
+                        <form asp-action="Createe" asp-route-id="@ViewBag.Tosend"
+                              data-ajax-begin="clearInputField" data-ajax-complete=""
+                              data-ajax-failure="alert('Fail')" data-ajax-success="sendMessage"
+                              data-ajax="true" data-ajax-method="POST">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <input name="MessageText" class="form-control form-control-lg" id="messageText" placeholder="Write your message online" />
+
+                            </div>
+                            <div style="display:none">
+                                <input type="button" id="joinGroup" value="Join Private Group" />
+                            </div>
+                            <select style="display:none" id="group">
+                                <option value="All">Everyone</option>
+                                <option value="Myself">Myself</option>
+                                <option value="PrivateGroup">Private Group</option>
+                            </select>
+                            <div class="form-group">
+                                <input type="submit" value="Send" id="submitButton" class="btn btn-outline-primary btn-block" />
+                                <button type="button" class="btn btn-outline-primary btn-block" onclick="closeForm()">Close</button>
+                            </div>
+                            <input type="hidden" value="@userName" name="username" />
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                <script>
+        const userName = "@ViewBag.CurrentUserName";
+                </script>
+            }
+
+        }
+        else
+        {
+            <div style=" background-color:white;border: solid; color: red; position: fixed; z-index: 2; top: 20%; left: 60%; width: 600px; height: 500px; overflow: scroll; display: none;" class="chat-popup" id="myForm">
+
+
+                <div class="row" style="margin:20px;">
+                    <div class="signin-form">
+                        <h5 class="text-uppercase mb-4 font-weight-bold text-3">@VipAssistProject.Resources.ResWebsite.lbSign_In</h5>
+                        <form asp-controller="User" asp-action="SignIn" method="post" role="form">
+                            <div class="form-group">
+                                <label class="form-label mb-1 text-2"><p class="m-0">@VipAssistProject.Resources.ResWebsite.lbEmail_address* </p></label>
+
+                                <input asp-for="@Model.Email" type="email" class="form-control form-control-lg">
+                                <span>@ViewBag.one</span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label mb-1 text-2"><p class="m-0">@VipAssistProject.Resources.ResWebsite.lbPassword * </p></label>
+
+                                <input asp-for="@Model.Password" type="password" class="form-control form-control-lg">
+                            </div>
+                            <div class="row pb-2">
+                                @*<div class="form-group form-check col-lg-6 ps-1">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="rememberMeCheck">
+                                            <label class="form-label custom-control-label text-2" for="rememberMeCheck">@VipAssistProject.Resources.ResWebsite.lbRemember_Me</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-6 text-end">
+                                        <a class="text-uppercase text-1 font-weight-bold text-color-dark" id="headerRecover" href="#">@VipAssistProject.Resources.ResWebsite.lbLOST_YOUR_PASSWORD_</a>
+                                    </div>*@
+                            </div>
+                            <div class="actions">
+                                <div class="row">
+                                    <div class="col d-flex justify-content-end">
+                                        <input type="hidden" asp-for="@Model.ReturnUrl" />
+                                        <input class="btn btn-primary" type="submit" style="font-size:10px;" value=@VipAssistProject.Resources.ResWebsite.lbLog_In />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                        <div class="extra-actions">
+                            <a asp-controller="User" asp-action="LogIn">@VipAssistProject.Resources.ResWebsite.lbDon_t_have_an_account_yet__SIGN_UP </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        }
+        <div role="main" class="main">
+
+            <section class="section bg-color-light border-0 m-0">
+                <div class="container">
+                    <div class="row text-center text-md-start">
+                        <div class="col-md-4 mb-4 mb-md-0 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
+                            <div class="row align-items-center justify-content-center justify-content-md-start">
+                                <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-primary my-4">
+                                    <div class="featured-box">
+                                        <div class="box-content px-lg-4 px-xl-5 py-lg-5">
+                                            <img class="img-fluid mb-4 mb-lg-0" src="~/Uploads/departure1.png" alt="">
+                                            <h2 class="font-weight-normal text-5">Departure <strong class="font-weight-extra-bold"></strong></h2>
+                                            <div class="text-center">
+
+
+
+                                                <a asp-controller="ServiceDetails" asp-action="BookingDetails2" asp-route-id="@ViewBag.ServiceId" asp-route-f="Departure" asp-route-l="@ViewBag.CarId" type="button" class="btn btn-modern btn-primary m-3" data-bs-toggle="tooltip" data-bs-animation="false" data-bs-placement="bottom" title="" data-bs-original-title="Departure means your flight is leaving from the airport at which you will be served">
+                                                    Departure
+                                                </a>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4 mb-md-0 appear-animation" data-appear-animation="fadeIn">
+                            <div class="row align-items-center justify-content-center justify-content-md-start">
+                                <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-primary my-4">
+                                    <div class="featured-box">
+                                        <div class="box-content px-lg-4 px-xl-5 py-lg-5">
+                                            <img class="img-fluid mb-4 mb-lg-0" src="~/Uploads/arrival.png" alt="">
+                                            <h2 class="font-weight-normal text-5">Arrival <strong class="font-weight-extra-bold"></strong></h2>
+
+                                            <div class="text-center">
+
+                                                <a asp-controller="ServiceDetails" asp-action="BookingDetails2" asp-route-id="@ViewBag.ServiceId" asp-route-f="Arrival" asp-route-l="@ViewBag.CarId" type="button" class="btn btn-modern btn-primary m-3" data-bs-toggle="tooltip" data-bs-animation="false" data-bs-placement="bottom" title="" data-bs-original-title="Arrival means your flight is landing at the airport at which you will be served">
+                                                    Arrival
+                                                </a>
+
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="200">
+                            <div class="row align-items-center justify-content-center justify-content-md-start">
+                                <div class="featured-boxes featured-boxes-modern-style-2 featured-boxes-modern-style-primary my-4">
+                                    <div class="featured-box">
+                                        <div class="box-content px-lg-4 px-xl-5 py-lg-5">
+                                            <img class="img-fluid mb-4 mb-lg-0" src="~/Uploads/connecting.png" alt="">
+                                            <h2 class="font-weight-normal text-5"> <strong class="font-weight-extra-bold">Connecting</strong></h2>
+
+                                            <div class="text-center">
+
+                                                <a asp-controller="ServiceDetails" asp-action="BookingDetails2" asp-route-id="@ViewBag.ServiceId" asp-route-f="Connecting" asp-route-l="@ViewBag.CarId" type="button" class="btn btn-modern btn-primary m-3" data-bs-toggle="tooltip" data-bs-animation="false" data-bs-placement="bottom" title="" data-bs-original-title="Connecting means you are transfering between flights at the airport where you will be served">
+                                                    Connecting
+                                                </a>
+
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+        <footer id="footer">
+            <div class="container">
+                <div class="footer-ribbon">
+                    <span>@VipAssistProject.Resources.ResWebsite.lbGet_In_Touch</span>
+                </div>
+                <ul class="nav nav-pills">
+                    <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+
+                    <li class="social-icons-linkedin"><a href="https://wa.me/00201033927725/" target="_blank" title="whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+                    <li class="social-icons-linkedin"><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=ahmedmostafa706@gmail.com/" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></li>
+                    <li class="social-icons-linkedin"><a href="tel:+201033927725" target="_self" id="yui_3_18_1_1_1632304817823_394" title="Phone"><i class="fas fa-phone-alt"></i></a></li>
+                    <li class="social-icons-linkedin"><a href="https://instagram.com/airport.assist?igshid=19ojyzz1n5s6m" target="_self" id="yui_3_18_1_1_1632307895128_286" title="Instagram"><i class="fab fa-instagram-square"></i></a></li>
+
+
+                </ul>
+                <div class="row py-5 my-4">
+                    <div class="col-md-6 mb-4 mb-lg-0">
+                        <a asp-controller="Home" asp-action="Index" class="logo pe-0 pe-lg-3">
+                            <img alt="Porto Website Template" src="~/img/logo-footer.png" class="opacity-7 bottom-4" height="32">
+                        </a>
+                        <p class="mt-2 mb-2" style="font-family: 'Open Sans Condensed', sans-serif;">@VipAssistProject.Resources.ResWebsite.lbWeprovide....</p>
+                        <p class="mb-0"><a asp-controller="Home" asp-action="AboutUs" class="btn-flat btn-xs text-color-light"><strong class="text-2">@VipAssistProject.Resources.ResWebsite.lbView_More</strong><i class="fas fa-angle-right p-relative top-1 ps-2"></i></a></p>
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="text-3 mb-3">@VipAssistProject.Resources.ResWebsite.lbContact_Us</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list list-icons list-icons-lg">
+                                    <li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="m-0">234 Street Name, City Name</p></li>
+                                    <li class="mb-1"><i class="fab fa-whatsapp text-color-primary"></i><p class="m-0"><a href="tel:8001234567">(800) 123-4567</a></p></li>
+                                    <li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:mail@example.com">mail@example.com</a></p></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list list-icons list-icons-sm">
+                                    <li><i class="fas fa-angle-right"></i><a asp-controller="Home" asp-action="FAQ" class="link-hover-style-1 ms-1"> FAQ's</a></li>
+
+                                    <li><i class="fas fa-angle-right"></i><a asp-controller="Home" asp-action="ContactUs" class="link-hover-style-1 ms-1"> @VipAssistProject.Resources.ResWebsite.lbContact_Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright footer-copyright-style-2">
+                <div class="container py-2">
+                    <div class="row py-4">
+                        <div class="col d-flex align-items-center justify-content-center">
+                            <p>© Copyright 2021. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Vendor -->
+    @*<script src="~/js/site4.min.js"></script>*@
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/jquery.appear/jquery.appear.min.js"></script>
+    <script src="~/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="~/vendor/jquery.cookie/jquery.cookie.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site3.min.js"></script>
+    <script>
+
+        function onCompanyChanged() {
+            var selectedValue = $(":selected").val();
+            if (selectedValue === "English" || selectedValue === "anglaise") {
+                window.location.href = `/Home/ChangeLanguage?lang=en&url=${window.location.href}`;
+            }
+            else if (selectedValue === "le français" || selectedValue === "French") {
+                window.location.href = `/Home/ChangeLanguage?lang=ar&url=${window.location.href}`;
+            }
+        }
+        var lang = "ar";
+
+        function OpenChangeLang() {
+            var elements = document.getElementsByClassName("language_test dropdown-item");
+            var selectedValue = $(":selected").val();
+            if (selectedValue === "الإنجليزية") {
+                window.location.href = `/Home/ChangeLanguage?lang=en&url=${window.location.href}`;
+            }
+
+
+
+        }
+    </script>
+
+
+
+
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat10.js"></script>
+
+    <script src="~/js/signalrReqHandler244.js"></script>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+    </script>
+
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">
+        .noti-content {
+            position: fixed;
+            right: 10px;
+            background: #e5e5e5;
+            border-radius: 4px;
+            top: 47px;
+            width: 250px;
+            display: none;
+            border: 1px solid #9e9;
+            z-index: 2;
+        }
+
+        /* ul#noticontent {
+            max-height: 200px;
+            overflow: auto;
+            padding: 0px;
+            margin: 0px;
+            padding-left: 20px;
+        }*/
+
+        ul#noticontent li {
+            margin: 3px;
+            padding: 6px;
+            background: #fff;
+        }
+
+        .noti-top-arrow {
+            border-color: transparent;
+            border-bottom-color: #f5deb3;
+            border-style: dashed dashed solid;
+            border-width: 0 8.5px 8.5px;
+            position: absolute;
+            right: 32px;
+            top: 8px;
+        }
+
+        span.noti {
+            color: #ff2323;
+            margin: 15px;
+            position: fixed;
+            right: 100px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        span.count {
+            position: relative;
+            top: 3px;
+        }
+    </style>
+
+</body>
+</html>

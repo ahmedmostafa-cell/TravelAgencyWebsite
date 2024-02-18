@@ -1,0 +1,1769 @@
+﻿@{
+    Layout = "";
+}
+
+@model VipAssistProject.Models.HomePageModel;
+@inject Microsoft.AspNetCore.Identity.SignInManager<ApplicationUser> signInManager
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Modals | Porto - Responsive HTML5 Template</title>
+
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Porto - Responsive HTML5 Template">
+    <meta name="author" content="okler.net">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <!-- Web Fonts  -->
+    <link id="googleFonts" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CShadows+Into+Light&display=swap" rel="stylesheet" type="text/css">
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="~/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="~/vendor/animate/animate.compat.css">
+    <link rel="stylesheet" href="~/vendor/simple-line-icons/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="~/vendor/owl.carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/vendor/owl.carousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/vendor/magnific-popup/magnific-popup.min.css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="~/css/theme.css">
+    <link rel="stylesheet" href="~/css/theme-elements.css">
+    <link rel="stylesheet" href="~/css/theme-blog.css">
+    <link rel="stylesheet" href="~/css/theme-shop.css">
+
+    <!-- Skin CSS -->
+    <link id="skinCSS" rel="stylesheet" href="~/css/skins/default.css">
+
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="~/css/custom.css">
+
+    <!-- Head Libs -->
+    <script src="~/vendor/modernizr/modernizr.min.js"></script>
+
+</head>
+
+<body data-plugin-page-transition>
+    <a class="far fa-comment fa-5x" style=" color: red; position: fixed; z-index:2; top: 90%; left: 80%;   " asp-controller="Home" asp-action="NewChat7"></a>
+    <div class="loading-overlay">
+        <div class="bounce-loader">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <div class="body">
+        <header id="header" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyStartAt': 45, 'stickySetTop': '-45px', 'stickyChangeLogo': true}">
+            <div class="header-body">
+                <div class="header-container container">
+                    <div class="header-row">
+                        <div class="header-column">
+                            <div class="header-row">
+                                <div class="header-logo">
+                                    <a asp-controller="Home" asp-action="Index">
+                                        <img alt="Porto" width="100" height="48" data-sticky-width="82" data-sticky-height="40" data-sticky-top="25" src="~/img/logo-default-slim.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-column justify-content-end">
+                            <div class="header-row pt-3">
+                                <nav class="header-nav-top">
+                                    <ul class="nav nav-pills">
+                                        <li class="nav-item nav-item-anim-icon d-none d-md-block">
+
+
+
+                                            <a class="nav-link ps-0" asp-controller="Home" asp-action="AboutUs"><i class="fas fa-angle-right"></i> @VipAssistProject.Resources.ResWebsite.lbAbout_Us</a>
+                                        </li>
+
+
+
+
+                                        @*<li class="nav-item nav-item-anim-icon d-none d-md-block">
+                                                <div class="navbar-header">
+                                                    <span class="noti glyphicon glyphicon-bell"><span class="count"></span></span>
+                                                    <div class="noti-content" style="width: 400px;">
+                                                        <div class="noti-top-arrow"></div>
+
+                                                        <ul id="noticontent">
+                                                        </ul>
+
+                                                    </div>
+                                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                    </button>
+                                                </div>
+
+                                            </li>*@
+
+
+
+
+                                        <li class="nav-item nav-item-anim-icon d-none d-md-block">
+                                            <a class="nav-link" asp-controller="Home" asp-action="ContactUs"><i class="fas fa-angle-right"></i> @VipAssistProject.Resources.ResWebsite.lbContact_Us</a>
+                                        </li>
+                                        <li class="nav-item nav-item-left-border nav-item-left-border-remove nav-item-left-border-md-show">
+                                            <span class="ws-nowrap"><i class="fas fa-phone"></i> (123) 456-789</span>
+                                        </li>
+                                        <li class="last">
+                                            <div class="header_top_lang_widget_home1">
+                                                <select class="selectpicker show-tick" onchange="onCompanyChanged()">
+                                                    <option class="language_test">@VipAssistProject.Resources.ResWebsite.lbLanguage</option>
+                                                    <option class="language_test">@VipAssistProject.Resources.ResWebsite.lbEnglish</option>
+                                                    <option class="language_test">@VipAssistProject.Resources.ResWebsite.lbFrench</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="header-nav-features">
+                                    <div class="header-nav-feature header-nav-features-search d-inline-flex">
+                                        <div class="navbar-header">
+                                            <span class="noti glyphicon glyphicon-bell"><span class="count"></span></span>
+                                            <div class="noti-content" style="width: 300px;">
+                                                <div class="noti-top-arrow"></div>
+
+                                                <ul id="noticontent">
+                                                </ul>
+
+                                            </div>
+                                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                    @*<div class="header-nav-feature header-nav-features-search d-inline-flex">
+                                            <a href="#" class="header-nav-features-toggle text-decoration-none" data-focus="headerSearch"><i class="fas fa-search header-nav-top-icon"></i></a>
+                                            <div class="header-nav-features-dropdown" id="headerTopSearchDropdown">
+                                                <form role="search" action="page-search-results.html" method="get">
+                                                    <div class="simple-search input-group">
+                                                        <input class="form-control text-1" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
+                                                        <button class="btn" type="submit">
+                                                            <i class="fas fa-search header-nav-top-icon"></i>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>*@
+                                    <div class="header-nav-feature header-nav-features-cart d-inline-flex ms-2">
+                                        <a href="#" class="header-nav-features-toggle">
+                                            <img src="~/img/icons/icon-cart.svg" width="14" alt="" class="header-nav-top-icon-img">
+                                            @if (Model.Cart != null)
+                                            {
+                                                <span class="cart-info">
+                                                    <span class="cart-qty">@Model.Cart.Count</span>
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <span class="cart-info">
+                                                    <span class="cart-qty">0</span>
+                                                </span>
+                                            }
+
+                                        </a>
+                                        <div class="header-nav-features-dropdown" id="headerTopCartDropdown">
+                                            @if (Model.Cart != null)
+                                            {
+                                                @foreach (var item in Model.Cart.LstServices)
+                                                {
+                                                    <ol class="mini-products-list">
+                                                        <li class="item">
+                                                            <a href="#" title="Camera X1000" class="product-image"><img src="@string.Format("/Uploads/{0}" , item.Path)" alt="Camera X1000"></a>
+                                                            <div class="product-details">
+                                                                <p class="product-name">
+                                                                    <a href="#">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.TitleEn : item.TitleFr)</a>
+                                                                </p>
+                                                                <p class="qty-price">
+                                                                    @item.Qty X <span class="price">$@item.Price</span>
+                                                                </p>
+                                                                <a asp-controller="ServiceDetails" asp-action="RemoveFromCart" asp-route-id="@item.ServiceId" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
+                                                            </div>
+                                                        </li>
+                                                    </ol>
+
+                                                }
+                                            }
+                                            @if (Model.Cart != null)
+                                            {
+                                                <div class="totals">
+                                                    <span class="label"><h5 class="text-uppercase mb-4 font-weight-bold text-3">@VipAssistProject.Resources.ResWebsite.lbTotal:</h5></span>
+                                                    <span class="price-total"><span class="price"> <h5 class="text-uppercase mb-4 font-weight-bold text-3">$@Model.Cart.Total</h5></span></span>
+
+                                                </div>
+                                                <div class="actions">
+                                                    <a class="btn btn-dark" asp-controller="Order" asp-action="Cart" style="font-size:10px;">@VipAssistProject.Resources.ResWebsite.lbView_Cart</a>
+                                                    <a class="btn btn-primary" asp-controller="Order" asp-action="CheckOut" style="font-size:10px;">@VipAssistProject.Resources.ResWebsite.lbCheckout</a>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="totals">
+                                                    <span class="label"><h5 class="text-uppercase mb-4 font-weight-bold text-3">@VipAssistProject.Resources.ResWebsite.lbTotal:</h5></span>
+
+                                                    <span class="price-total"><span class="price"> <h5 class="text-uppercase mb-4 font-weight-bold text-3">$0</h5></span></span>
+
+
+                                                </div>
+
+                                            }
+
+
+
+                                        </div>
+                                    </div>
+                                    @if (signInManager.IsSignedIn(User))
+                                    {
+                                        <div class="header-nav-feature header-nav-features-user header-nav-features-user-logged d-inline-flex mx-2 pe-2" id="headerAccount">
+                                            <a href="#" class="header-nav-features-toggle">
+                                                <i class="far fa-user"></i> @Model.UserData.Where(a => a.UserName == User.Identity.Name).FirstOrDefault().UserName
+                                            </a>
+                                            <div class="header-nav-features-dropdown header-nav-features-dropdown-mobile-fixed header-nav-features-dropdown-force-right" id="headerTopUserDropdown">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <p class="mb-0 pb-0 text-2 line-height-1 pt-1">Hello,</p>
+                                                        <p><strong class="text-color-dark text-4">@Model.UserData.Where(a => a.UserName == User.Identity.Name).FirstOrDefault().UserName</strong></p>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="d-flex justify-content-end">
+                                                            <img class="rounded-circle" width="40" height="40" alt="" src="~/img/avatars/avatar.jpg">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <ul class="nav nav-list-simple flex-column text-3">
+
+                                                            <li class="nav-item"><a class="nav-link" asp-controller="Order" asp-action="CustomerInvoicesHistory">@VipAssistProject.Resources.ResWebsite.lbMy_Orders</a></li>
+                                                            <li class="nav-item"><a class="nav-link border-bottom-0" asp-controller="User" asp-action="LogOut">@VipAssistProject.Resources.ResWebsite.lbLog_Out</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    }
+
+                                    <div class="header-nav-feature header-nav-features-user d-inline-flex mx-2 pe-2 signin" id="headerAccount">
+                                        <a href="#" class="header-nav-features-toggle">
+                                            <i class="far fa-user"></i> @VipAssistProject.Resources.ResWebsite.lbSign_In
+                                        </a>
+                                        <div class="header-nav-features-dropdown header-nav-features-dropdown-mobile-fixed header-nav-features-dropdown-force-right" id="headerTopUserDropdown">
+                                            <div class="signin-form">
+                                                <h5 class="text-uppercase mb-4 font-weight-bold text-3">@VipAssistProject.Resources.ResWebsite.lbSign_In</h5>
+                                                <form asp-controller="User" asp-action="SignIn" method="post" role="form">
+                                                    <div class="form-group">
+                                                        <label class="form-label mb-1 text-2"><p class="m-0">@VipAssistProject.Resources.ResWebsite.lbEmail_address* </p></label>
+
+                                                        <input asp-for="@Model.Email" type="email" class="form-control form-control-lg">
+                                                        <span>@ViewBag.one</span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="form-label mb-1 text-2"><p class="m-0">@VipAssistProject.Resources.ResWebsite.lbPassword * </p></label>
+
+                                                        <input asp-for="@Model.Password" type="password" class="form-control form-control-lg">
+                                                    </div>
+                                                    <div class="row pb-2">
+                                                        @*<div class="form-group form-check col-lg-6 ps-1">
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" id="rememberMeCheck">
+                                                                    <label class="form-label custom-control-label text-2" for="rememberMeCheck">@VipAssistProject.Resources.ResWebsite.lbRemember_Me</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group col-lg-6 text-end">
+                                                                <a class="text-uppercase text-1 font-weight-bold text-color-dark" id="headerRecover" href="#">@VipAssistProject.Resources.ResWebsite.lbLOST_YOUR_PASSWORD_</a>
+                                                            </div>*@
+                                                    </div>
+                                                    <div class="actions">
+                                                        <div class="row">
+                                                            <div class="col d-flex justify-content-end">
+                                                                <input type="hidden" asp-for="@Model.ReturnUrl" />
+                                                                <input class="btn btn-primary" type="submit" style="font-size:10px;" value=@VipAssistProject.Resources.ResWebsite.lbLog_In />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+                                                <div class="extra-actions">
+                                                    <a asp-controller="User" asp-action="LogIn">@VipAssistProject.Resources.ResWebsite.lbDon_t_have_an_account_yet__SIGN_UP </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="signup-form">
+                                                <h5 class="text-uppercase mb-4 font-weight-bold text-3">Sign Up</h5>
+                                                <form asp-controller="User" asp-action="Register" method="post" role="form">
+                                                    <div class="form-group">
+                                                        <label class="form-label mb-1 text-2 opacity-8">@VipAssistProject.Resources.ResWebsite.lbEmail_address* </label>
+                                                        <input asp-for="@Model.user.Email" type="email" class="form-control form-control-lg">
+                                                        <span asp-validation-for="@Model.user.Email"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="form-label mb-1 text-2 opacity-8">@VipAssistProject.Resources.ResWebsite.lbPassword *</label>
+                                                        <input asp-for="@Model.user.Password" type="password" class="form-control form-control-lg">
+                                                        <span asp-validation-for="@Model.user.Password"></span>
+                                                    </div>
+                                                    @*<div class="form-group">
+                                                            <label class="form-label mb-1 text-2 opacity-8">Re-enter Password *</label>
+                                                            <input type="password" class="form-control form-control-lg">
+                                                        </div>*@
+                                                    <div class="actions">
+                                                        <div class="row">
+                                                            <div class="col d-flex justify-content-end">
+                                                                <input type="submit" value="Register" class="btn btn-primary" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="extra-actions">
+                                                        <p>@VipAssistProject.Resources.ResWebsite.lbAlready_have_an_account_<a href="#" id="headerSignIn" class="text-uppercase text-1 font-weight-bold text-color-dark">@VipAssistProject.Resources.ResWebsite.lbLog_In</a></p>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                            <div class="recover-form">
+                                                <h5 class="text-uppercase mb-2 pb-1 font-weight-bold text-3">@VipAssistProject.Resources.ResWebsite.lbReset_My_Password</h5>
+                                                <p class="text-2 mb-4">@VipAssistProject.Resources.ResWebsite.lbComplete_the_form_below_to_receive_an_email_with_the_authorization_code_needed_to_reset_your_password_</p>
+
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label class="form-label mb-1 text-2 opacity-8">@VipAssistProject.Resources.ResWebsite.lbEmail_address* </label>
+                                                        <input type="email" class="form-control form-control-lg">
+                                                    </div>
+                                                    <div class="actions">
+                                                        <div class="row">
+                                                            <div class="col d-flex justify-content-end">
+                                                                <a class="btn btn-primary" href="#">@VipAssistProject.Resources.ResWebsite.lbReset_My_Password</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="extra-actions">
+                                                        <p>@VipAssistProject.Resources.ResWebsite.lbAlready_have_an_account_<a href="#" id="headerRecoverCancel" class="text-uppercase text-1 font-weight-bold text-color-dark">@VipAssistProject.Resources.ResWebsite.lbLog_In</a></p>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="header-row">
+                                <div class="header-nav pt-1">
+                                    <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1">
+                                        <nav class="collapse">
+                                            <ul class="nav nav-pills" id="mainNav">
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle active" asp-controller="Home" asp-action="Index">
+                                                        @VipAssistProject.Resources.ResWebsite.lbHome
+                                                    </a>
+
+
+                                                </li>
+
+
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle" href="#">
+                                                        Services
+                                                    </a>
+                                                    <ul class="dropdown-menu">
+                                                        @foreach (var item in Model.LstServicesWithMediaSubMenue)
+                                                        {
+                                                            <li class="dropdown-submenu">
+
+                                                                <a class="dropdown-item" asp-controller="ServiceDetails" asp-action="Details" asp-route-id="@item.ServiceCategoryId"> @(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.TitleEn : item.TitleFr)</a>
+
+                                                            </li>
+
+                                                        }
+
+
+
+
+
+
+
+
+
+
+                                                    </ul>
+                                                </li>
+
+
+
+
+
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle" asp-controller="Home" asp-action="AboutUs">
+                                                        @VipAssistProject.Resources.ResWebsite.lbAbout_Us
+                                                    </a>
+
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle" asp-controller="Home" asp-action="ContactUs">
+                                                        @VipAssistProject.Resources.ResWebsite.lbContact_Us
+                                                    </a>
+
+                                                </li>
+
+                                                <li class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle" asp-controller="Home" asp-action="NewChat7">
+                                                        @VipAssistProject.Resources.ResWebsite.lbLifeChat
+                                                    </a>
+
+                                                </li>
+
+                                            </ul>
+                                            <ul class="nav nav-pills">
+                                                <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                                <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li class="social-icons-linkedin">
+                                                    <span class="fl-icon">
+                                                        <a href="https://wa.me/00201033927725" target="_self">
+                                                            <i class="fab fa-whatsapp" aria-hidden="true" style="font-size:15px;color:green;"></i>
+                                                        </a>
+                                                    </span>
+                                                </li>
+                                                <li class="social-icons-linkedin">
+                                                    <span class="fl-icon">
+                                                        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=ahmedmostafa706@gmail.com" target="_self">
+                                                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                                                        </a>
+                                                    </span>
+                                                </li>
+                                                <li class="social-icons-linkedin">
+                                                    <span class="fl-icon" id="yui_3_18_1_1_1632304817823_395">
+                                                        <a href="tel:+201033927725" target="_self" id="yui_3_18_1_1_1632304817823_394">
+                                                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                                                        </a>
+                                                    </span>
+                                                </li>
+
+                                                <li class="social-icons-linkedin">
+                                                    <span class="fl-icon" id="yui_3_18_1_1_1632307895128_287">
+                                                        <a href="https://instagram.com/airport.assist?igshid=19ojyzz1n5s6m " target="_self" id="yui_3_18_1_1_1632307895128_286">
+                                                            <i style="font-size:15px;color:#833AB4;" class="fab fa-instagram-square" aria-hidden="true"></i>
+                                                        </a>
+                                                    </span>
+                                                </li>
+
+
+
+
+
+
+                                            </ul>
+                                        </nav>
+                                    </div>
+
+
+
+
+
+
+
+
+
+
+                                    @*<div class="fl-col fl-node-603f5b579f61b fl-col-small fl-col-small-full-width fl-visible-desktop" data-node="603f5b579f61b" id="yui_3_18_1_1_1632304817823_400">
+                                            <div class="fl-col-content fl-node-content" id="yui_3_18_1_1_1632304817823_399">
+                                                <div class="fl-module fl-module-icon-group fl-node-603f5b579f168" data-node="603f5b579f168" id="yui_3_18_1_1_1632304817823_398">
+                                                    <div class="fl-module-content fl-node-content" id="yui_3_18_1_1_1632304817823_397">
+                                                        <div class="fl-icon-group" id="yui_3_18_1_1_1632304817823_396">
+                                                            <span class="fl-icon" id="yui_3_18_1_1_1632304817823_395">
+                                                                <a href="tel:+442045177711" target="_self" id="yui_3_18_1_1_1632304817823_394">
+                                                                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                                                                </a>
+                                                            </span>
+                                                            <span class="fl-icon">
+                                                                <a href="mailto:meet@airport-assist.com" target="_self">
+                                                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                                                </a>
+                                                            </span>
+                                                            <span class="fl-icon">
+                                                                <a href="https://wa.me/447511151134" target="_self">
+                                                                    <i class="fab fa-whatsapp-square" aria-hidden="true"></i>
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>*@
+
+
+                                    <div style="align-items"></div>
+
+
+
+
+
+
+
+
+
+                                    <button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
+                                        <i class="fas fa-bars"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                @*<div class="navbar navbar-inverse navbar-fixed-top">
+                        <div class="container">
+                            <div class="navbar-header">
+
+                                <span class="noti glyphicon glyphicon-bell"><span class="count"></span></span>
+                                <div class="noti-content">
+                                    <div class="noti-top-arrow"></div>
+                                    <ul id="noticontent">
+                                    </ul>
+
+                                </div>
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                @Html.ActionLink("Application name", "Index10", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+                            </div>
+                            <div class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>*@
+            </div>
+        </header>
+
+        <div class="owl-carousel-wrapper position-relative" style="height: 670px">
+            <div class="owl-carousel-loader">
+                <div class="bounce-loader">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+            </div>
+            <div class="owl-carousel dots-inside dots-horizontal-center show-dots-hover nav-inside nav-inside-plus nav-dark nav-md nav-font-size-md show-nav-hover mb-0" data-plugin-options="{'responsive': {'0': {'items': 1}, '479': {'items': 1}, '768': {'items': 1}, '979': {'items': 1}, '1199': {'items': 1}}, 'loop': false, 'autoHeight': false, 'margin': 0, 'dots': true, 'dotsVerticalOffset': '-75px', 'nav': true, 'animateIn': 'fadeIn', 'animateOut': 'fadeOut', 'mouseDrag': false, 'touchDrag': false, 'pullDrag': false, 'autoplay': true, 'autoplayTimeout': 9000, 'autoplayHoverPause': true, 'rewind': true}">
+
+                <!-- Carousel Slide 1 -->
+                @*<div class="position-relative" data-dynamic-height="['670px','670px','670px','550px','500px']" style="background-image: url(img/slides/10.jpg); background-size: cover; background-position: center; height: 670px;">
+                        <div class="position-absolute top-0 right-0 w-50pct w-lg-auto">
+                            <img src="~/img/slides/10.jpg" class="w-100 appear-animation" data-appear-animation="fadeInLeftDownShorter" data-appear-animation-delay="500" alt="">
+                        </div>
+                        <div class="position-absolute top-50pct left-0 transform3dy-n50 w-50pct w-lg-auto">
+                            <img src="~/img/slides/10.jpg" class="w-100 appear-animation" data-appear-animation="fadeInRightDownShorter" data-appear-animation-delay="1000" alt="">
+                        </div>
+                        <div class="position-absolute transform3dy-n50">
+                            <img src="~/img/slides/10.png" class="w-75 appear-animation" data-appear-animation="fadeInRightDownShorter" data-appear-animation-delay="1500" alt="" style="top: 20%; left: -20%;" data-plugin-options="{'forceAnimation': true}">
+                        </div>
+
+                        <div class="container position-relative z-index-1 h-100">
+                            <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                                <h3 class="position-relative text-color-light text-5 line-height-5 font-weight-medium px-4 mb-2 appear-animation" data-appear-animation="fadeInDownShorter" data-plugin-options="{'minWindowWidth': 0}">
+                                    <span class="position-absolute right-100pct top-50pct transform3dy-n50 opacity-3">
+                                        <img src="~/img/slides/1.png" class="w-auto appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                                    </span>
+                                    DO YOU NEED A <span class="position-relative">NEW <span class="position-absolute left-50pct transform3dx-n50 top-0 mt-4"><img src="img/slides/10.png" class="w-auto appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="1000" data-plugin-options="{'minWindowWidth': 0}" alt="" /></span></span>
+                                    <span class="position-absolute left-100pct top-50pct transform3dy-n50 opacity-3">
+                                        <img src="~/img/slides/2.png" class="w-auto appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                                    </span>
+
+                                </h3>
+                                <h1 class="text-color-light font-weight-extra-bold text-12 mb-3 appear-animation" data-appear-animation="blurIn" data-appear-animation-delay="500" data-plugin-options="{'minWindowWidth': 0}">WEB DESIGN?</h1>
+                                <p class="text-4 text-color-light font-weight-light opacity-7 mb-0" data-plugin-animated-letters data-plugin-options="{'startDelay': 1000, 'minWindowWidth': 0}">Check out our options and features</p>
+                            </div>
+                        </div>
+                    </div>*@
+
+                <!-- Carousel Slide 2 -->
+                @foreach (var item in Model.LstSliderImages.Where(a => a.CurrentState == 1).OrderBy(a => a.ImageOrder))
+                {
+                    <div class="position-relative overlay overlay-show overlay-op-8" data-dynamic-height="['670px','670px','670px','550px','500px']" style="background-image: url(@string.Format("/Uploads/{0}",item.ImagePath)); background-size: cover; background-position: center; height: 670px;">
+                        <div class="container position-relative z-index-3 h-100">
+                            <div class="row justify-content-center align-items-center h-100">
+                                <div class="col-lg-6">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <h3 class="position-relative text-color-light text-5 line-height-5 font-weight-medium px-4 mb-2 appear-animation" data-appear-animation="fadeInDownShorter" data-plugin-options="{'minWindowWidth': 0}">
+                                            <span class="position-absolute right-100pct top-50pct transform3dy-n50 opacity-3">
+                                                <img src="~/img/slides/2.png" class="w-auto appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                                            </span>
+                                            @VipAssistProject.Resources.ResWebsite.lbVipair
+                                            <span class="position-absolute left-100pct top-50pct transform3dy-n50 opacity-3">
+                                                @*<img src="@string.Format("/Uploads/{0}",item.ImagePath)" class="w-auto appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />*@
+
+                                            </span>
+                                        </h3>
+                                        <h2 class="text-color-light font-weight-extra-bold text-12 mb-3 appear-animation" data-appear-animation="blurIn" data-appear-animation-delay="500" data-plugin-options="{'minWindowWidth': 0}">@VipAssistProject.Resources.ResWebsite.lbMeet and Greet Service</h2>
+                                        <p class="text-4 text-color-light font-weight-light opacity-7 text-center mb-0" data-plugin-animated-letters data-plugin-options="{'startDelay': 1000, 'minWindowWidth': 0, 'animationSpeed': 30}">@VipAssistProject.Resources.ResWebsite.lbTrusted <strong class="text-color-light">40,000</strong> @VipAssistProject.Resources.ResWebsite.lbSatisfied</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+                <!--Carousel Slide 3 -->
+                @*<div class="position-relative overlay overlay-show overlay-op-8" data-dynamic-height="['670px','670px','670px','550px','500px']" style="background-image: url(img/slides/10.jpg); background-size: cover; background-position: center; height: 670px; ">
+                        <div class="container position-relative z-index-3 h-100">
+                            <div class="row justify-content-center align-items-center h-100">
+                                <div class="col-lg-6">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <h3 class="position-relative text-color-light text-4 line-height-5 font-weight-medium px-4 mb-2 appear-animation" data-appear-animation="fadeInDownShorter" data-plugin-options="{'minWindowWidth': 0}">
+                                            <span class="position-absolute right-100pct top-50pct transform3dy-n50 opacity-3">
+                                                <img src="~/img/slides/slide-title-border.png" class="w-auto appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                                            </span>
+                                            WE CREATE DESIGNS, WE ARE
+                                            <span class="position-absolute left-100pct top-50pct transform3dy-n50 opacity-3">
+                                                <img src="~/img/slides/slide-title-border.png" class="w-auto appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                                            </span>
+                                        </h3>
+                                        <h2 class="porto-big-title text-color-light font-weight-extra-bold mb-3" data-plugin-animated-letters data-plugin-options="{'startDelay': 1000, 'minWindowWidth': 0, 'animationSpeed': 300, 'animationName': 'fadeInRightShorterOpacity', 'letterClass': 'd-inline-block'}">PORTO</h2>
+                                        <p class="text-4 text-color-light font-weight-light text-center mb-0" data-plugin-animated-letters data-plugin-options="{'startDelay': 2000, 'minWindowWidth': 0}">The best choice for your new website</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+
+                <!--Carousel Slide 4 -->
+                @*<div class="position-relative pt-5" style="background-image: url(img/slides/10.jpg);background-repeat: no-repeat;background-size: cover;height: 100vh;">
+                        <div class="position-absolute top-0 left-0 w-50pct w-lg-auto z-index-2">
+                            <img src="~/img/slides/10.jpg" class="w-100 appear-animation" data-appear-animation="fadeInRightDownShorter" data-appear-animation-delay="500" alt="">
+                        </div>
+                        <div class="position-absolute top-0 right-0 w-50pct w-lg-auto z-index-2">
+                            <img src="~/img/slides/2.jpg" class="w-100 appear-animation" data-appear-animation="fadeInLeftDownShorter" data-appear-animation-delay="500" alt="">
+                        </div>
+                        <div class="position-absolute bottom-0 left-0 w-50pct w-lg-auto z-index-2">
+                            <img src="~/img/slides/3.jpg" class="w-100 appear-animation" data-appear-animation="fadeInRightUpShorter" data-appear-animation-delay="500" alt="">
+                        </div>
+                        <div class="position-absolute bottom-0 right-0 w-50pct w-lg-auto z-index-2">
+                            <img src="~/img/slides/10.jpg" class="w-100 appear-animation" data-appear-animation="fadeInLeftUpShorter" data-appear-animation-delay="500" alt="">
+                        </div>
+
+                        <div class="container position-relative z-index-3 h-100">
+                            <div class="row justify-content-center align-items-center h-100">
+                                <div class="col-lg-6">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <h3 class="position-relative text-color-light text-4 line-height-5 font-weight-medium px-4 mb-3 appear-animation" data-appear-animation="fadeInDownShorterPlus" data-plugin-options="{'minWindowWidth': 0}">
+                                            <span class="position-absolute right-100pct top-50pct transform3dy-n50 opacity-3">
+                                                <img src="~/img/slides/10.png" class="w-auto appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                                            </span>
+                                            WE WORK HARD AND PORTO HAS
+                                            <span class="position-absolute left-100pct top-50pct transform3dy-n50 opacity-3">
+                                                <img src="~/img/slides/10.png" class="w-auto appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                                            </span>
+                                        </h3>
+                                        <h2 class="text-color-light font-weight-extra-bold text-12 mb-4 appear-animation" data-appear-animation="blurIn" data-appear-animation-delay="500" data-plugin-options="{'minWindowWidth': 0}">
+                                            THE <span class="position-relative">BEST<span class="position-absolute left-50pct transform3dx-n50 bottom-0"><img src="img/slides/slide-blue-line-big.png" class="w-auto appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="1000" data-plugin-options="{'minWindowWidth': 0}" alt="" /></span></span> DESIGN
+                                        </h2>
+                                        <p class="text-4 text-color-light font-weight-light opacity-7 text-center mt-2 mb-4" data-plugin-animated-letters data-plugin-options="{'startDelay': 1000, 'minWindowWidth': 0, 'animationSpeed': 25}">Trusted by over <strong class="text-color-light">40,000</strong> satisfied users, Porto is a huge success in the one of larest world's MarketPlace</p>
+                                        <a href="#" class="btn btn-primary btn-rounded font-weight-bold text-3 px-5 py-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600">GET STARTED NOW!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+            </div>
+        </div>
+
+
+        <div role="main" class="main">
+
+            <section class="page-header page-header-classic page-header-md">
+                <div class="container">
+                    <div class="row">
+                        @*<div class="col-md-8 order-2 order-md-1 align-self-center p-static">
+                                <h1 data-title-border>Services</h1>
+                            </div>
+                            <div class="col-md-4 order-1 order-md-2 align-self-center">
+                                <ul class="breadcrumb d-block text-md-end">
+                                    <li><a href="#">Home</a></li>
+                                    <li class="active">Pages</li>
+                                </ul>
+                            </div>*@
+                    </div>
+                </div>
+            </section>
+
+            <div class="container pb-1">
+
+                <div class="row pt-4">
+                    <div class="col">
+                        <div class="overflow-hidden mb-3">
+                            @*<h2 class="font-weight-bold text-8 mb-0 appear-animation" data-appear-animation="maskUp">
+                                   @VipAssistProject.Resources.ResWebsite.lbWe_Are
+                                </h2>*@
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="overflow-hidden">
+                            <p class="lead mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200" style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">
+                                @VipAssistProject.Resources.ResWebsite.lbWeProvide2....
+                            </p>
+                        </div>
+                    </div>
+                    @*<div class="col-lg-2 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="500">
+                            <a href="#" class="btn btn-modern btn-dark mt-1">Get a Quote!</a>
+                        </div>*@
+                </div>
+
+                <div class="row">
+                    <div class="col py-3">
+                        <hr class="solid mt-5 mb-2">
+                    </div>
+                </div>
+
+                @*<div class="row">
+                        <div class="featured-boxes featured-boxes-style-2">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="700">
+                                    <div class="featured-box featured-box-effect-4">
+                                        <div class="box-content">
+                                            <i class="icon-featured icon-screen-tablet icons text-color-primary bg-color-grey"></i>
+                                            <h4 class="font-weight-bold">Mobile Apps</h4>
+                                            <p class="px-3">Lorem ipsum dolor sit amt, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="900">
+                                    <div class="featured-box featured-box-effect-4">
+                                        <div class="box-content">
+                                            <i class="icon-featured icon-layers icons text-color-light bg-color-primary"></i>
+                                            <h4 class="font-weight-bold">Creative Websites</h4>
+                                            <p class="px-3">Lorem ipsum dolor sit amt, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="1100">
+                                    <div class="featured-box featured-box-effect-4">
+                                        <div class="box-content">
+                                            <i class="icon-featured icon-magnifier icons text-color-primary bg-color-grey"></i>
+                                            <h4 class="font-weight-bold">SEO Optimization</h4>
+                                            <p class="px-3">Lorem ipsum dolor sit amt, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="1500">
+                                    <div class="featured-box featured-box-effect-4">
+                                        <div class="box-content">
+                                            <i class="icon-featured icon-screen-desktop icons text-color-light bg-color-primary"></i>
+                                            <h4 class="font-weight-bold">Brand Solutions</h4>
+                                            <p class="px-3">Lorem ipsum dolor sit amt, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="1300">
+                                    <div class="featured-box featured-box-effect-4">
+                                        <div class="box-content">
+                                            <i class="icon-featured icon-doc icons text-color-primary bg-color-grey"></i>
+                                            <h4 class="font-weight-bold">HTML5 / CSS3 / JS</h4>
+                                            <p class="px-3">Lorem ipsum dolor sit amt, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="1100">
+                                    <div class="featured-box featured-box-effect-4">
+                                        <div class="box-content">
+                                            <i class="icon-featured icon-menu icons text-color-light bg-color-primary"></i>
+                                            <h4 class="font-weight-bold">Buttons</h4>
+                                            <p class="px-3">Lorem ipsum dolor sit amt, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+            </div>
+
+            <section class="section bg-color-grey section-height-3 border-0 mt-5 mb-0">
+                <div class="container">
+
+                    <div class="row">
+                        @{ int i = 0; }
+
+                        @foreach (var item in Model.LstServicesWithMedia)
+                        {
+                            if (item.ServiceCategoryId == Guid.Parse("125b996d-c2ec-41c2-bee8-b60de52546a2"))
+                            {
+                                <div class="col">
+                                    @if (i % 2 == 0)
+                                    {
+                                        <div id="examples" class="container py-2">
+
+                                            <div class="row">
+                                                <div class="col">
+
+                                                    <div class="row align-items-center">
+                                                        <div class="col-sm-3">
+
+                                                            <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
+                                                                <h4 class="mb-2">Default</h4>
+                                                                <p class="m-0">This is the default modal options without settings.</p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-sm-9">
+
+                                                            <button class="btn btn-modern btn-primary" data-bs-toggle="modal" data-bs-target="#defaultModal">
+                                                                Launch Default Modal
+                                                            </button>
+
+                                                            <div class="modal " id="defaultModal" tabindex="-1" aria-labelledby="defaultModalLabel" style="display: none;" aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h4 class="modal-title" id="defaultModalLabel">Default Modal Title</h4>
+                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">×</button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus.</p>
+                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus.</p>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <hr class="solid my-5">
+
+                                                    <div class="row align-items-center">
+                                                        <div class="col-sm-3">
+
+                                                            <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
+                                                                <h4 class="mb-2">Optional Sizes</h4>
+                                                                <p class="m-0">You can change the size of the modal.</p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-sm-9">
+
+                                                            <button class="btn btn-modern btn-primary" data-bs-toggle="modal" data-bs-target="#largeModal">
+                                                                Launch Large Modal
+                                                            </button>
+
+                                                            <div class="modal " id="largeModal" tabindex="-1" aria-labelledby="largeModalLabel" style="padding-left: 22px; display: none;" aria-hidden="true">
+                                                                <div class="modal-dialog  modal-fullscreen " style="width:100%;">
+                                                                    <div class="modal-content" style="width: 100%; height: 1000px; background-color: white; ">
+                                                                        <div class="modal-header" style="width: 100%; ">
+                                                                            <h4 class="modal-title" id="largeModalLabel">Large Modal Title</h4>
+                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">×</button>
+                                                                        </div>
+                                                                        <div class="modal-body" style="width: 100%; ">
+                                                                            <div class="col-sm-8 col-md-6 col-lg-4 offset-sm-4 offset-md-4 offset-lg-2 position-relative mt-sm-5" style="top: 1.7rem;">
+                                                                                <div class="container">
+
+
+                                                                                    <div class="row">
+                                                                                        <div class="col-xs-4 col-sm-2">
+                                                                                            <div class="portfolio-list">
+                                                                                                <div class="portfolio-box">
+                                                                                                    <div class="view item">
+                                                                                                        <a class="portfolio-details ajax-get-content" data-content="/mercedes.html" href="#pushUp">
+                                                                                                            <div class="portfolio-image-container">
+                                                                                                                <img alt="" class="img-responsive" src="/Uploads/dfb11fe8-3f23-479c-8f92-f00d02609c1f.jpg">
+                                                                                                                <div class="portfolio-intro-details">
+                                                                                                                    <div class="pull-left prftl-det">
+                                                                                                                        <p>S Class</p>
+                                                                                                                        <p class="prtfl-cat">Premiere</p>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <a class="portfolio-details ajax-get-content" data-content="/bmw.html" href="#pushUp">
+                                                                                                <div class="portfolio-image-container">
+                                                                                                    <img alt="" class="img-responsive" src="/Uploads/dfb11fe8-3f23-479c-8f92-f00d02609c1f.jpg">
+                                                                                                    <div class="portfolio-intro-details">
+                                                                                                        <div class="pull-left prftl-det">
+                                                                                                            <p>7 Series</p>
+                                                                                                            <p class="prtfl-cat">Premiere</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                            <a class="portfolio-details ajax-get-content" data-content="/eclass.html" href="#pushUp">
+                                                                                                <div class="portfolio-image-container">
+                                                                                                    <img alt="" class="img-responsive" src="/Uploads/dfb11fe8-3f23-479c-8f92-f00d02609c1f.jpg">
+                                                                                                    <div class="portfolio-intro-details">
+                                                                                                        <div class="pull-left prftl-det">
+                                                                                                            <p>E CLASS</p>
+                                                                                                            <p class="prtfl-cat">Executive</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                            <a class="portfolio-details ajax-get-content" data-content="/vclass.html" href="#pushUp">
+                                                                                                <div class="portfolio-image-container">
+                                                                                                    <img alt="" class="img-responsive" src="/Uploads/dfb11fe8-3f23-479c-8f92-f00d02609c1f.jpg">
+                                                                                                    <div class="portfolio-intro-details">
+                                                                                                        <div class="pull-left prftl-det">
+                                                                                                            <p>V CLASS</p>
+                                                                                                            <p class="prtfl-cat">MPV</p>
+                                                                                                        </div>
+
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                            <a class="portfolio-details ajax-get-content" data-content="/19seater.html" href="#pushUp">
+                                                                                                <div class="portfolio-image-container">
+                                                                                                    <img alt="" class="img-responsive" src="/Uploads/dfb11fe8-3f23-479c-8f92-f00d02609c1f.jpg">
+                                                                                                    <div class="portfolio-intro-details">
+                                                                                                        <div class="pull-left prftl-det">
+                                                                                                            <p>VIP 16 Seater</p>
+                                                                                                            <p class="prtfl-cat">People Carrier</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                            <a class="visible-xs portfolio-details ajax-get-content" data-content="/rangerover.html" href="#pushUp">
+                                                                                                <div class="portfolio-image-container">
+                                                                                                    <img alt="" class="img-responsive" src="/Uploads/dfb11fe8-3f23-479c-8f92-f00d02609c1f.jpg">
+                                                                                                    <div class="portfolio-intro-details">
+                                                                                                        <div class="pull-left prftl-det">
+                                                                                                            <p>VOGUE LWB</p>
+                                                                                                            <p class="prtfl-cat">4x4</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                            <a class="visible-xs portfolio-details ajax-get-content" data-content="/sport.html" href="#pushUp">
+                                                                                                <div class="portfolio-image-container">
+                                                                                                    <img alt="" class="img-responsive" src="/Uploads/dfb11fe8-3f23-479c-8f92-f00d02609c1f.jpg">
+                                                                                                    <div class="portfolio-intro-details">
+                                                                                                        <div class="pull-left prftl-det">
+                                                                                                            <p>SPORT</p>
+                                                                                                            <p class="prtfl-cat">4x4</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                            <a class="visible-xs portfolio-details ajax-get-content" data-content="/rollsroyce.html" href="#pushUp">
+                                                                                                <div class="portfolio-image-container">
+                                                                                                    <img alt="" class="img-responsive" src="/Uploads/dfb11fe8-3f23-479c-8f92-f00d02609c1f.jpg">
+                                                                                                    <div class="portfolio-intro-details">
+                                                                                                        <div class="pull-left prftl-det">
+                                                                                                            <p>GHOST</p>
+                                                                                                            <p class="prtfl-cat">Luxury</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                            <a class="visible-xs portfolio-details ajax-get-content" data-content="/bentley.html" href="#pushUp">
+                                                                                                <div class="portfolio-image-container">
+                                                                                                    <img alt="" class="img-responsive" src="/Uploads/dfb11fe8-3f23-479c-8f92-f00d02609c1f.jpg">
+                                                                                                    <div class="portfolio-intro-details">
+                                                                                                        <div class="pull-left prftl-det">
+                                                                                                            <p>Maybach</p>
+                                                                                                            <p class="prtfl-cat">Luxury</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                            <a class="portfolio-details ajax-get-content hide-large marginb20" data-content="/49seater.html" href="#pushUp">
+                                                                                                <div class="portfolio-image-container">
+                                                                                                    <img alt="" class="img-responsive" src="/Uploads/dfb11fe8-3f23-479c-8f92-f00d02609c1f.jpg">
+                                                                                                    <div class="portfolio-intro-details">
+                                                                                                        <div class="pull-left prftl-det">
+                                                                                                            <p>49 Seater</p>
+                                                                                                            <p class="prtfl-cat">Luxury</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                        <div class="col-xs-8 col-sm-8">
+                                                                                            <div class="row">
+                                                                                                <div class="col-sm-12">
+                                                                                                    <div id="portfolio-cars-container">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-8 col-md-offset-2">
+                                                                                                                <p class="text-center">
+                                                                                                                    <!--	<img class="img-responsive" src="temp/chauffeur-splash.jpg" /> -->
+                                                                                                                </p><div class="text-center">
+                                                                                                                    <img src="img/lvglogo.png" alt="london vip group" title="invert" class="invert ch-logo">
+                                                                                                                    <h2 class="marginb10">BROWSE</h2>
+                                                                                                                    <h4>THROUGH OUR LUXURIOUS SELECTION OF VEHICLES</h4>
+                                                                                                                </div>
+
+                                                                                                                <button type="button" id="portfolio-close-2" href="#" class="btn btn-primary btn-lg btn-block margint20 bck-btn">BACK</button>
+                                                                                                                <p></p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="col-sm-12">
+                                                                                                    <div class="contact-form margint20">
+                                                                                                        <div class="contact-form margint20">
+                                                                                                            <p class="contact-form-text-container text-center">
+
+                                                                                                            </p>
+                                                                                                        </div>
+                                                                                                        <div id="chauffeur-contact-form" class="hide">
+                                                                                                            <h3 class="text-center">Enquire about Chauffeuring</h3><br>
+                                                                                                            <form action="#" method="post" id="ajax-contact-form2">
+                                                                                                                <input type="hidden" name="form-type" value="Chauffeur Contact Form">
+                                                                                                                <div class="row">
+                                                                                                                    <div class="col-xs-12 col-sm-6">
+                                                                                                                        <div class="row">
+                                                                                                                            <div class="col-xs-12">
+                                                                                                                                <p id="chauffeur-hire-type-label" class="text-light-grey"><em>If the hire type selected below is for an <strong>airport pick up</strong> then the name entered above will be displayed on the chauffeurs name board.</em></p>
+                                                                                                                                <select id="chauffeur-hire-type" name="hire_type" class="form-control required" required="required" tabindex="5">
+                                                                                                                                    <option value="">Please select Hire Type</option>
+                                                                                                                                    <option value="Airport - Pick Up">Airport - Pick Up</option>
+                                                                                                                                    <option value="Airport - Drop Off">Airport - Drop Off</option>
+                                                                                                                                    <option value="Hourly / Daily Hire">Hourly / Daily hire</option>
+                                                                                                                                </select>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="row">
+                                                                                                                            <div class="col-xs-12">
+                                                                                                                                <div id="chauffeur-hire-pick-up-location-container" class="hide margint20">
+                                                                                                                                    <label for="do_drop_off_location">Pick up location</label>
+                                                                                                                                    <input id="chauffeur-hire-do-drop-off-location" name="do_drop_off_location" class="form-control" tabindex="17" type="text" placeholder="POSTAL CODE" required="">
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div id="chauffeur-hire-duration" class="hide margint20">
+                                                                                                                            <div class="row">
+                                                                                                                                <div class="col-xs-12">
+                                                                                                                                    <label for="hire_duration">Estimated Duration</label>
+                                                                                                                                </div>
+                                                                                                                                <div class="col-xs-12 col-sm-6">
+                                                                                                                                    <select id="chauffeur-hire-days" name="hire_days" class="form-control" tabindex="5">
+                                                                                                                                        <option value="">Days</option>
+                                                                                                                                        <option value="1">1 Day</option>
+                                                                                                                                        <option value="2">2 Days</option>
+                                                                                                                                        <option value="3">3 Days</option>
+                                                                                                                                        <option value="4">4 Days</option>
+                                                                                                                                        <option value="5">5 Days</option>
+                                                                                                                                        <option value="6">6 Days</option>
+                                                                                                                                        <option value="7">7 Days</option>
+                                                                                                                                        <option value="8">8 Days</option>
+                                                                                                                                        <option value="9">9 Days</option>
+                                                                                                                                        <option value="10">10 Days</option>
+                                                                                                                                    </select>
+                                                                                                                                </div>
+                                                                                                                                <div class="col-xs-12 col-sm-6">
+                                                                                                                                    <select id="chauffeur-hire-hours" name="hire_hours" class="form-control" tabindex="5">
+                                                                                                                                        <option value="">Hours</option>
+                                                                                                                                        <option value="1">1 Hour</option>
+                                                                                                                                        <option value="2">2 Hours</option>
+                                                                                                                                        <option value="3">3 Hours</option>
+                                                                                                                                        <option value="4">4 Hours</option>
+                                                                                                                                        <option value="5">5 Hours</option>
+                                                                                                                                        <option value="6">6 Hours</option>
+                                                                                                                                        <option value="7">7 Hours</option>
+                                                                                                                                        <option value="8">8 Hours</option>
+                                                                                                                                        <option value="9">9 Hours</option>
+                                                                                                                                        <option value="10">10 Hours</option>
+                                                                                                                                    </select>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div id="chauffeur-hire-airport" class="hide row">
+                                                                                                                            <div class="col-xs-12">
+                                                                                                                                <div class="margint20">
+                                                                                                                                    <label for="car">Choose your Airport</label>
+                                                                                                                                    <select id="chauffeur-airport" name="airport" class="form-control" tabindex="10">
+                                                                                                                                        <option value="">Please select an option</option>
+                                                                                                                                        <option value="Heathrow Airport - LHR">Heathrow Airport - LHR</option>
+                                                                                                                                        <option value="Gatwick Airport - LGW">Gatwick Airport - LGW</option>
+                                                                                                                                        <option value="Stansted Airport - STN">Stansted Airport - STN</option>
+                                                                                                                                        <option value="Luton Airport - LTN">Luton Airport - LTN</option>
+                                                                                                                                        <option value="London City Airport - LCA">London City Airport - LCA</option>
+                                                                                                                                        <option value="Battersea Heliport - EGLW">Battersea Heliport - EGLW</option>
+                                                                                                                                        <option value="Biggin Hill Airport - BQH">Biggin Hill Airport - BQH</option>
+                                                                                                                                        <option value="Farnborough Airport - FAB">Farnborough Airport - FAB</option>
+                                                                                                                                        <option value="Northolt Airport- NHT">Northolt Airport- NHT</option>
+                                                                                                                                    </select>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div id="chauffeur-hire-pick-up-time" class="hide">
+                                                                                                                            <div id="chauffeur-flight-number-container" class="row margint20">
+                                                                                                                                <div class="col-xs-12 col-sm-6"><input id="chauffeur-flight-number" name="flight_number" class="form-control" tabindex="12" type="text" placeholder="FLIGHT NUMBER"></div>
+                                                                                                                                <div class="col-xs-12 col-sm-6">
+                                                                                                                                    <p class="text-light-grey"><em>Please ensure this is entered in the correct format e.g: BA577 or British Airways 577.</em></p>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                            <div class="row">
+                                                                                                                                <div class="col-xs-12">
+                                                                                                                                    <div class="row">
+                                                                                                                                        <div class="col-xs-12">
+                                                                                                                                            <div class="margint20">
+                                                                                                                                                <p class="text-light-grey"><strong>Pick up date &amp; time.</strong></p>
+                                                                                                                                            </div>
+                                                                                                                                        </div>
+                                                                                                                                        <div class="col-xs-12 col-sm-6">
+                                                                                                                                            <input id="chauffeur-pick-up-date" name="pick_up_date" class="form-control datepicker" required="required" tabindex="6" type="text" pattern="\d{1,2}/\d{1,2}/\d{2}" placeholder="DD/MM/YY">
+                                                                                                                                        </div>
+                                                                                                                                        <div class="col-xs-12 col-sm-3">
+                                                                                                                                            <select id="chauffeur-pick-up-time-hours" name="pick_up_time_hours" required="required" class="form-control" tabindex="9">
+                                                                                                                                                <option value="06">06</option>
+                                                                                                                                                <option value="07">07</option>
+                                                                                                                                                <option value="08">08</option>
+                                                                                                                                                <option value="09">09</option>
+                                                                                                                                                <option value="10">10</option>
+                                                                                                                                                <option value="11">11</option>
+                                                                                                                                                <option value="12">12</option>
+                                                                                                                                                <option value="13">13</option>
+                                                                                                                                                <option value="14">14</option>
+                                                                                                                                                <option value="15">15</option>
+                                                                                                                                                <option value="16">16</option>
+                                                                                                                                                <option value="17">17</option>
+                                                                                                                                                <option value="18">18</option>
+                                                                                                                                                <option value="19">19</option>
+                                                                                                                                                <option value="20">20</option>
+                                                                                                                                                <option value="21">21</option>
+                                                                                                                                                <option value="22">22</option>
+                                                                                                                                                <option value="23">23</option>
+                                                                                                                                            </select>
+                                                                                                                                        </div>
+                                                                                                                                        <div class="col-xs-12 col-sm-3">
+                                                                                                                                            <select id="chauffeur-pick-up-time-minutes" name="pick_up_time_minutes" required="required" class="form-control" tabindex="9">
+                                                                                                                                                <option value="00">00</option>
+                                                                                                                                                <option value="15">15</option>
+                                                                                                                                                <option value="30">30</option>
+                                                                                                                                                <option value="45">45</option>
+                                                                                                                                            </select>
+                                                                                                                                        </div>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="row">
+                                                                                                                            <div id="chauffeur-hire-pu-drop-off-location" class="hide col-xs-12 col-sm-6">
+                                                                                                                                <label for="drop_off_location">Drop off location</label>
+                                                                                                                                <input name="pu_drop_off_location" class="form-control" tabindex="17" type="text" placeholder="POSTAL CODE">
+                                                                                                                            </div>
+                                                                                                                            <div id="chauffeur-hire-luggage-quantity" class="hide col-xs-12 col-sm-6" required="required">
+                                                                                                                                <label for="luggage_quantity">Luggage Quantity</label>
+                                                                                                                                <select name="luggage_quantity" class="form-control" tabindex="11">
+                                                                                                                                    <option value="">0 Pieces</option>
+                                                                                                                                    <option value="1">1 Piece</option>
+                                                                                                                                    <option value="2">2 Pieces</option>
+                                                                                                                                    <option value="3">3 Pieces</option>
+                                                                                                                                    <option value="4">4 Pieces</option>
+                                                                                                                                    <option value="5">5 Pieces</option>
+                                                                                                                                    <option value="6">6 Pieces</option>
+                                                                                                                                    <option value="7">7 Pieces</option>
+                                                                                                                                    <option value="8">8 Pieces</option>
+                                                                                                                                </select>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+
+                                                                                                                    <div class="col-xs-12 col-sm-6">
+                                                                                                                        <div class="row">
+                                                                                                                            <div class="col-xs-12">
+                                                                                                                                <label for="car">Choose your Car</label>
+                                                                                                                                <select name="car" class="form-control required" required="required" tabindex="11">
+                                                                                                                                    <option value="">Please select an option</option>
+                                                                                                                                    <option value="Mercedes S Class">Mercedes S Class</option>
+                                                                                                                                    <option value="BMW 7 Series">BMW 7 Series</option>
+                                                                                                                                    <option value="Mercedes E Class">Mercedes E Class</option>
+                                                                                                                                    <option value="Mercedes Viano">Mercedes V Class</option>
+                                                                                                                                    <option value="Range Rover Vogue">Range Rover Vogue</option>
+                                                                                                                                    <option value="Range Rover Sport">Range Rover Sport</option>
+                                                                                                                                    <option value="Rolls Royce Ghost">Rolls Royce Ghost</option>
+                                                                                                                                    <option value="Bentley Continental Flying Spur">Bentley Continental Flying Spur</option>
+                                                                                                                                </select>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <br>
+                                                                                                                        <div class="row">
+                                                                                                                            <div class="col-xs-12"><input name="name" class="form-control required" required="required" tabindex="3" type="text" pattern="[A-Za-z\ ]{3,}" placeholder="NAME"></div>
+                                                                                                                        </div>
+                                                                                                                        <div class="row">
+                                                                                                                            <div class="col-xs-12 col-sm-6"><input name="phone" class="form-control required" required="required" pattern="[0-9]{11}" tabindex="3" type="tel" placeholder="PHONE NUMBER"></div>
+                                                                                                                            <div class="col-xs-12 col-sm-6"><input name="email" class="form-control required" required="required" tabindex="4" type="email" placeholder="E-MAIL ADDRESS"></div>
+                                                                                                                        </div>
+                                                                                                                        <div class="row">
+                                                                                                                            <br>
+                                                                                                                            <div class="col-xs-12"><textarea name="special_requests" class="form-control" tabindex="19" rows="7" placeholder="SPECIAL REQUESTS, e.g. baby seats, wheel chair assistance"></textarea></div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="row">
+                                                                                                                    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                                                                                                                        <div class="checkbox text-center">
+                                                                                                                            <label>
+                                                                                                                                <input type="checkbox" name="agree_terms" value="" required="required">
+                                                                                                                                I have read and accept the London VIP Group <a href="termsandconditions.html" target="_blank">Terms and Conditions.</a><p></p>
+                                                                                                                            </label>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                    <div class="col-xs-12 col-sm-6 col-sm-offset-3"><input class="form-control" tabindex="20" type="submit" value="ENQUIRE NOW"></div>
+                                                                                                                </div>
+                                                                                                            </form>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="hidden-xs col-xs-3 col-sm-2 pull-right">
+                                                                                            <a class="portfolio-details ajax-get-content" data-content="/rangerover.html" href="#pushUp">
+                                                                                                <div class="portfolio-image-container">
+                                                                                                    <img alt="" class="img-responsive" src="/Uploads/dfb11fe8-3f23-479c-8f92-f00d02609c1f.jpg">
+                                                                                                    <div class="portfolio-intro-details">
+                                                                                                        <div class="pull-left prftl-det">
+                                                                                                            <p>VOGUE LWB</p>
+                                                                                                            <p class="prtfl-cat">4x4</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                            <a class="portfolio-details ajax-get-content" data-content="/sport.html" href="#pushUp">
+                                                                                                <div class="portfolio-image-container">
+                                                                                                    <img alt="" class="img-responsive" src="/Uploads/dfb11fe8-3f23-479c-8f92-f00d02609c1f.jpg">
+                                                                                                    <div class="portfolio-intro-details">
+                                                                                                        <div class="pull-left prftl-det">
+                                                                                                            <p>SPORT</p>
+                                                                                                            <p class="prtfl-cat">4x4</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                            <a class="portfolio-details ajax-get-content" data-content="/rollsroyce.html" href="#pushUp">
+                                                                                                <div class="portfolio-image-container">
+                                                                                                    <img alt="" class="img-responsive" src="/Uploads/dfb11fe8-3f23-479c-8f92-f00d02609c1f.jpg">
+                                                                                                    <div class="portfolio-intro-details">
+                                                                                                        <div class="pull-left prftl-det">
+                                                                                                            <p>GHOST</p>
+                                                                                                            <p class="prtfl-cat">Luxury</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                            <a class="portfolio-details ajax-get-content" data-content="/bentley.html" href="#pushUp">
+                                                                                                <div class="portfolio-image-container">
+                                                                                                    <img alt="" class="img-responsive" src="/Uploads/dfb11fe8-3f23-479c-8f92-f00d02609c1f.jpg">
+                                                                                                    <div class="portfolio-intro-details">
+                                                                                                        <div class="pull-left prftl-det">
+                                                                                                            <p>Maybach</p>
+                                                                                                            <p class="prtfl-cat">Luxury</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                            <a class="portfolio-details ajax-get-content" data-content="/49seater.html" href="#pushUp">
+                                                                                                <div class="portfolio-image-container">
+                                                                                                    <img alt="" class="img-responsive" src="/Uploads/dfb11fe8-3f23-479c-8f92-f00d02609c1f.jpg">
+                                                                                                    <div class="portfolio-intro-details">
+                                                                                                        <div class="pull-left prftl-det">
+                                                                                                            <p>49 Seater</p>
+                                                                                                            <p class="prtfl-cat">Luxury</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+
+
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <button class="btn btn-modern btn-primary" data-bs-toggle="modal" data-bs-target="#smallModal">
+                                                                Launch Small Modal
+                                                            </button>
+
+                                                            <div class="modal " id="smallModal" tabindex="-1" aria-labelledby="smallModalLabel" style="display: none;" aria-hidden="true">
+                                                                <div class="modal-dialog modal-sm">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h4 class="modal-title" id="smallModalLabel">Small Modal Title</h4>
+                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">×</button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus.</p>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <hr class="solid my-5">
+
+                                                    <div class="row align-items-center">
+                                                        <div class="col-sm-3">
+
+                                                            <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
+                                                                <h4 class="mb-2">With Form</h4>
+                                                                <p class="m-0">Add forms in the content of the modal.</p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-sm-9">
+
+                                                            <button class="btn btn-modern btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
+                                                                Launch Form Modal
+                                                            </button>
+
+                                                            <div class="modal " id="formModal" tabindex="-1" aria-labelledby="formModalLabel" style="display: none;" aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h4 class="modal-title" id="formModalLabel">Large Modal Title</h4>
+                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">×</button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <form id="demo-form" class="mb-4" novalidate="novalidate">
+                                                                                <div class="form-group row align-items-center">
+                                                                                    <label class="col-sm-3 text-start text-sm-end mb-0">Name</label>
+                                                                                    <div class="col-sm-9">
+                                                                                        <input type="text" name="name" class="form-control" placeholder="Type your name..." required="">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group row align-items-center">
+                                                                                    <label class="col-sm-3 text-start text-sm-end mb-0">Email</label>
+                                                                                    <div class="col-sm-9">
+                                                                                        <input type="email" name="email" class="form-control" placeholder="Type your email..." required="">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group row align-items-center">
+                                                                                    <label class="col-sm-3 text-start text-sm-end mb-0">URL</label>
+                                                                                    <div class="col-sm-9">
+                                                                                        <input type="url" name="url" class="form-control" placeholder="Type an URL...">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-sm-3 text-start text-sm-end mb-0">Comment</label>
+                                                                                    <div class="col-sm-9">
+                                                                                        <textarea rows="5" class="form-control" placeholder="Type your comment..." required=""></textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                                                                            <button type="button" class="btn btn-primary">Save Changes</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <hr class="solid my-5">
+
+                                                    <div class="row align-items-center pb-4 mb-2">
+                                                        <div class="col-sm-3">
+
+                                                            <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
+                                                                <h4 class="mb-2">No Animation</h4>
+                                                                <p class="m-0">Remove the animation of the modal.</p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-sm-9">
+
+                                                            <button class="btn btn-modern btn-primary" data-bs-toggle="modal" data-bs-target="#noAnimModal">
+                                                                Launch Modal
+                                                            </button>
+
+                                                            <div class="modal" id="noAnimModal" tabindex="-1" aria-labelledby="" style="display: none; " aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h4 class="modal-title" id="noAnimModalLabel">Remove Animation Modal Title</h4>
+                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">×</button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus.</p>
+                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus.</p>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row align-items-center pt-4 appear-animation" data-appear-animation="fadeInLeftShorter">
+                                            <h2 class="text-color-dark font-weight-normal text-6 mb-2"><strong class="font-weight-extra-bold"> @(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.TitleEn : item.TitleFr)</strong></h2>
+                                            <div class="col-md-4 mb-4 mb-md-0">
+                                                <img class="img-fluid scale-2 pe-5 pe-md-0 my-4" src="@string.Format("/Uploads/{0}" , item.Path)" alt="layout styles" />
+                                            </div>
+                                            <div class="col-md-8 ps-md-5">
+
+                                                <p class="fas fa-check"><span style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.DescriptionEn : item.DescriptionFr)</span></p>
+                                                <p class="fas fa-check"><span style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.ShortDescriptionEn : item.ShortDescriptionFr)</span></p>
+                                                <p class="fas fa-check"><span style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.DescriptionAr : item.ShortDescriptionAr)</span></p>
+                                            </div>
+                                        </div>
+                                        i++;
+                                        <br />
+
+                                        <div class="actions">
+                                            <a class=" btn btn-rounded btn-quaternary mb-2 badge badge-primary badge-lg" asp-controller="ServiceDetails" asp-action="AddToCart" asp-route-id="@item.ServiceId">@VipAssistProject.Resources.ResWebsite.lbBook_Now</a>
+                                            @if (item.ServiceCategoryId == Guid.Parse("e992a21c-11a4-430e-babb-764f74955b80"))
+                                            {
+                                                <a class=" btn btn-rounded btn-quaternary mb-2 badge badge-primary badge-lg" href="https://www.blue-aviation.com/">@VipAssistProject.Resources.ResWebsite.lbBookThirdParty</a>
+                                            }
+
+                                        </div>
+                                        <hr class="solid my-5">
+                                        continue;
+                                    }
+                                    else
+                                    {
+
+
+                                        <div class="row align-items-center pt-5 pb-3 appear-animation" data-appear-animation="fadeInRightShorter">
+                                            <h2 class="text-color-dark font-weight-normal text-6 mb-2"><strong class="font-weight-extra-bold">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.TitleEn : item.TitleFr)</strong></h2>
+                                            <div class="col-md-8 pe-md-5 mb-5 mb-md-0">
+                                                <h2 class="font-weight-normal text-6 mb-3"><strong class="font-weight-extra-bold">Exclusive</strong> Style Switcher</h2>
+                                                <p class="fas fa-check"><span style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.DescriptionEn : item.DescriptionFr)</span></p>
+                                                <p class="fas fa-check"><span style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.ShortDescriptionEn : item.ShortDescriptionFr)</span></p>
+                                                <p class="fas fa-check"><span style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.DescriptionAr : item.ShortDescriptionAr)</span></p>
+                                            </div>
+                                            <div class="col-md-4 px-5 px-md-3">
+                                                <img class="img-fluid scale-2 my-4" src="@string.Format("/Uploads/{0}" , item.Path)" alt="style switcher" />
+                                            </div>
+                                        </div>
+
+                                        <br />
+
+                                        <div class="actions">
+                                            <a class=" btn btn-rounded btn-quaternary mb-2 badge badge-primary badge-lg" asp-controller="ServiceDetails" asp-action="AddToCart" asp-route-id="@item.ServiceId">@VipAssistProject.Resources.ResWebsite.lbBook_Now</a>
+                                            @if (item.ServiceCategoryId == Guid.Parse("e992a21c-11a4-430e-babb-764f74955b80"))
+                                            {
+                                                <a class=" btn btn-rounded btn-quaternary mb-2 badge badge-primary badge-lg" href="https://www.blue-aviation.com/">@VipAssistProject.Resources.ResWebsite.lbBookThirdParty</a>
+                                            }
+
+                                        </div>
+                                        <hr class="solid my-5">
+                                        i++;
+                                    }
+
+
+
+                                </div>
+
+                            }
+                            else
+                            {
+                                <div class="col">
+                                    @if (i % 2 == 0)
+                                    {
+
+                                        <div class="row align-items-center pt-4 appear-animation" data-appear-animation="fadeInLeftShorter">
+                                            <h2 class="text-color-dark font-weight-normal text-6 mb-2"><strong class="font-weight-extra-bold"> @(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.TitleEn : item.TitleFr)</strong></h2>
+                                            <div class="col-md-4 mb-4 mb-md-0">
+                                                <img class="img-fluid scale-2 pe-5 pe-md-0 my-4" src="@string.Format("/Uploads/{0}" , item.Path)" alt="layout styles" />
+                                            </div>
+                                            <div class="col-md-8 ps-md-5">
+
+                                                <p class="fas fa-check"><span style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.DescriptionEn : item.DescriptionFr)</span></p>
+                                                <p class="fas fa-check"><span style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.ShortDescriptionEn : item.ShortDescriptionFr)</span></p>
+                                                <p class="fas fa-check"><span style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.DescriptionAr : item.ShortDescriptionAr)</span></p>
+                                            </div>
+                                        </div>
+                                        i++;
+                                        <br />
+
+                                        <div class="actions">
+                                            <a class=" btn btn-rounded btn-quaternary mb-2 badge badge-primary badge-lg" asp-controller="ServiceDetails" asp-action="AddToCart" asp-route-id="@item.ServiceId">@VipAssistProject.Resources.ResWebsite.lbBook_Now</a>
+                                            @if (item.ServiceCategoryId == Guid.Parse("e992a21c-11a4-430e-babb-764f74955b80"))
+                                            {
+                                                <a class=" btn btn-rounded btn-quaternary mb-2 badge badge-primary badge-lg" href="https://www.blue-aviation.com/">@VipAssistProject.Resources.ResWebsite.lbBookThirdParty</a>
+                                            }
+
+                                        </div>
+                                        <hr class="solid my-5">
+                                        continue;
+                                    }
+                                    else
+                                    {
+
+
+                                        <div class="row align-items-center pt-5 pb-3 appear-animation" data-appear-animation="fadeInRightShorter">
+                                            <h2 class="text-color-dark font-weight-normal text-6 mb-2"><strong class="font-weight-extra-bold">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.TitleEn : item.TitleFr)</strong></h2>
+                                            <div class="col-md-8 pe-md-5 mb-5 mb-md-0">
+                                                <h2 class="font-weight-normal text-6 mb-3"><strong class="font-weight-extra-bold">Exclusive</strong> Style Switcher</h2>
+                                                <p class="fas fa-check"><span style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.DescriptionEn : item.DescriptionFr)</span></p>
+                                                <p class="fas fa-check"><span style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.ShortDescriptionEn : item.ShortDescriptionFr)</span></p>
+                                                <p class="fas fa-check"><span style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.DescriptionAr : item.ShortDescriptionAr)</span></p>
+                                            </div>
+                                            <div class="col-md-4 px-5 px-md-3">
+                                                <img class="img-fluid scale-2 my-4" src="@string.Format("/Uploads/{0}" , item.Path)" alt="style switcher" />
+                                            </div>
+                                        </div>
+
+                                        <br />
+
+                                        <div class="actions">
+                                            <a class=" btn btn-rounded btn-quaternary mb-2 badge badge-primary badge-lg" asp-controller="ServiceDetails" asp-action="AddToCart" asp-route-id="@item.ServiceId">@VipAssistProject.Resources.ResWebsite.lbBook_Now</a>
+                                            @if (item.ServiceCategoryId == Guid.Parse("e992a21c-11a4-430e-babb-764f74955b80"))
+                                            {
+                                                <a class=" btn btn-rounded btn-quaternary mb-2 badge badge-primary badge-lg" href="https://www.blue-aviation.com/">@VipAssistProject.Resources.ResWebsite.lbBookThirdParty</a>
+                                            }
+
+                                        </div>
+                                        <hr class="solid my-5">
+                                        i++;
+                                    }
+
+
+
+                                </div>
+
+                            }
+
+
+
+                        }
+                        @*<div class="col">
+
+                                <div class="row align-items-center pt-4 appear-animation" data-appear-animation="fadeInLeftShorter">
+                                    <div class="col-md-4 mb-4 mb-md-0">
+                                        <img class="img-fluid scale-2 pe-5 pe-md-0 my-4" src="~/img/layout-styles.png" alt="layout styles" />
+                                    </div>
+                                    <div class="col-md-8 ps-md-5">
+                                        <h2 class="font-weight-normal text-6 mb-3"><strong class="font-weight-extra-bold">Layout</strong> Styles &amp; Variants</h2>
+                                        <p class="text-4">There are so many styles you can combine that is possible to create almost any kind of layout based on Porto Template, navigate in our preview and see the header variations, the colors, and the page content types that you will be able to use.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci.</p>
+                                    </div>
+                                </div>
+
+                                <hr class="solid my-5">
+
+                                <div class="row align-items-center pt-5 pb-3 appear-animation" data-appear-animation="fadeInRightShorter">
+                                    <div class="col-md-8 pe-md-5 mb-5 mb-md-0">
+                                        <h2 class="font-weight-normal text-6 mb-3"><strong class="font-weight-extra-bold">Exclusive</strong> Style Switcher</h2>
+                                        <p class="text-4">With our exlusive Style Switcher you will be able to choose any color you want for your website, choose the layout style (wide / boxed), website type (one page / normal), then generate the css that will be compiled by a {less} proccessor.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci.</p>
+                                    </div>
+                                    <div class="col-md-4 px-5 px-md-3">
+                                        <img class="img-fluid scale-2 my-4" src="~/img/style-switcher.png" alt="style switcher" />
+                                    </div>
+                                </div>
+                            </div>*@
+                    </div>
+                </div>
+            </section>
+
+            @*<div class="container-fluid">
+                    <div class="row featured-boxes-full featured-boxes-full-scale">
+                        <div class="col-lg-3 featured-box-full featured-box-full-primary">
+                            <i class="far fa-life-ring"></i>
+                            <h4>Customer Support</h4>
+                            <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. Quisque rutrum pellentesque imperdiet.</p>
+                        </div>
+                        <div class="col-lg-3 featured-box-full featured-box-full-primary">
+                            <i class="fas fa-film"></i>
+                            <h4>Sliders</h4>
+                            <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. Quisque rutrum pellentesque imperdiet.</p>
+                        </div>
+                        <div class="col-lg-3 featured-box-full featured-box-full-primary">
+                            <i class="far fa-star"></i>
+                            <h4>Winner</h4>
+                            <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. </p>
+                        </div>
+                        <div class="col-lg-3 featured-box-full featured-box-full-primary">
+                            <i class="far fa-edit"></i>
+                            <h4>Customizable</h4>
+                            <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. Quisque rutrum pellentesque imperdiet.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container pt-4">
+                    <div class="row text-center pt-4 mt-5">
+                        <div class="col">
+                            <h2 class="word-rotator slide font-weight-bold text-8 mb-2">
+                                <span>We're not the only ones </span>
+                                <span class="word-rotator-words bg-primary">
+                                    <b class="is-visible">excited</b>
+                                    <b>happy</b>
+                                </span>
+                                <span> about Porto Template...</span>
+                            </h2>
+                            <h4 class="text-primary lead tall text-4">40,000 CUSTOMERS IN 100 COUNTRIES USE PORTO TEMPLATE. MEET OUR CUSTOMERS.</h4>
+                        </div>
+                    </div>
+
+                    <div class="row text-center mt-5 pb-5 mb-5">
+                        <div class="owl-carousel owl-theme carousel-center-active-item mb-0" data-plugin-options="{'responsive': {'0': {'items': 1}, '476': {'items': 1}, '768': {'items': 5}, '992': {'items': 7}, '1200': {'items': 7}}, 'autoplay': true, 'autoplayTimeout': 3000, 'dots': false}">
+                            <div>
+                                <img class="img-fluid" src="~/img/logos/logo-1.png" alt="">
+                            </div>
+                            <div>
+                                <img class="img-fluid" src="~/img/logos/logo-2.png" alt="">
+                            </div>
+                            <div>
+                                <img class="img-fluid" src="~/img/logos/logo-3.png" alt="">
+                            </div>
+                            <div>
+                                <img class="img-fluid" src="~/img/logos/logo-4.png" alt="">
+                            </div>
+                            <div>
+                                <img class="img-fluid" src="~/img/logos/logo-5.png" alt="">
+                            </div>
+                            <div>
+                                <img class="img-fluid" src="~/img/logos/logo-6.png" alt="">
+                            </div>
+                            <div>
+                                <img class="img-fluid" src="~/img/logos/logo-4.png" alt="">
+                            </div>
+                            <div>
+                                <img class="img-fluid" src="~/img/logos/logo-2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+
+            @*<section class="call-to-action call-to-action-strong-grey content-align-center call-to-action-in-footer">
+                    <div class="container py-5">
+                        <div class="row py-3">
+                            <div class="col-md-9 col-lg-9">
+                                <div class="call-to-action-content">
+                                    <h2 class="font-weight-normal text-7 mb-0">Porto is <strong>everything</strong> you need to create an <strong>awesome</strong> website!</h2>
+                                    <p class="mb-0">The best HTML template for your new website.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3">
+                                <div class="call-to-action-btn">
+                                    <a href="http://themeforest.net/item/porto-responsive-html5-template/4106987" target="_blank" class="btn btn-dark btn-lg text-3 font-weight-semibold px-4 py-3 mt-5">Get Started Now</a><span class="arrow hlb d-none d-md-block" data-appear-animation="rotateInUpLeft" style="top: -90px; left: 70%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>*@
+
+        </div>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="footer-ribbon">
+                    <span>@VipAssistProject.Resources.ResWebsite.lbGet_In_Touch</span>
+                </div>
+                <div class="row py-5 my-4">
+                    <div class="col-md-6 mb-4 mb-lg-0">
+                        <a asp-controller="Home" asp-action="Index" class="logo pe-0 pe-lg-3">
+                            <img alt="Porto Website Template" src="~/img/logo-footer.png" class="opacity-7 bottom-4" height="32">
+                        </a>
+                        <p class="mt-2 mb-2" style="font-family: 'Open Sans Condensed', sans-serif;">@VipAssistProject.Resources.ResWebsite.lbWeprovide....</p>
+                        <p class="mb-0"><a asp-controller="Home" asp-action="AboutUs" class="btn-flat btn-xs text-color-light"><strong class="text-2">@VipAssistProject.Resources.ResWebsite.lbView_More</strong><i class="fas fa-angle-right p-relative top-1 ps-2"></i></a></p>
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="text-3 mb-3">@VipAssistProject.Resources.ResWebsite.lbContact_Us</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list list-icons list-icons-lg">
+                                    <li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="m-0">234 Street Name, City Name</p></li>
+                                    <li class="mb-1"><i class="fab fa-whatsapp text-color-primary"></i><p class="m-0"><a href="tel:8001234567">(800) 123-4567</a></p></li>
+                                    <li class="mb-1"><i class="far fa-envelope text-color-primary"></i><p class="m-0"><a href="mailto:mail@example.com">mail@example.com</a></p></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list list-icons list-icons-sm">
+                                    <li><i class="fas fa-angle-right"></i><a asp-controller="Home" asp-action="FAQ" class="link-hover-style-1 ms-1"> FAQ's</a></li>
+
+                                    <li><i class="fas fa-angle-right"></i><a asp-controller="Home" asp-action="ContactUs" class="link-hover-style-1 ms-1"> @VipAssistProject.Resources.ResWebsite.lbContact_Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright footer-copyright-style-2">
+                <div class="container py-2">
+                    <div class="row py-4">
+                        <div class="col d-flex align-items-center justify-content-center">
+                            <p>© Copyright 2021. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Vendor -->
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/jquery.appear/jquery.appear.min.js"></script>
+    <script src="~/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="~/vendor/jquery.cookie/jquery.cookie.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/vendor/jquery.validation/jquery.validate.min.js"></script>
+    <script src="~/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="~/vendor/jquery.gmap/jquery.gmap.min.js"></script>
+    <script src="~/vendor/lazysizes/lazysizes.min.js"></script>
+    <script src="~/vendor/isotope/jquery.isotope.min.js"></script>
+    <script src="~/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="~/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="~/vendor/vide/jquery.vide.min.js"></script>
+    <script src="~/vendor/vivus/vivus.min.js"></script>
+
+    <!-- Theme Base, Components and Settings -->
+    <script src="~/js/theme.js"></script>
+
+    <!-- Theme Custom -->
+    <script src="~/js/custom.js"></script>
+
+    <!-- Theme Initialization Files -->
+    <script src="~/js/theme.init.js"></script>
+
+</body>
+</html>
+
+
+
+
+

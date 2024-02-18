@@ -1,0 +1,119 @@
+﻿
+@model HomePageModel
+
+
+
+
+
+<div role="main" class="main">
+
+    <section class="page-header page-header-modern bg-color-light-scale-1 page-header-lg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 align-self-center p-static order-2 text-center">
+                    <h1 class="font-weight-bold text-dark">@VipAssistProject.Resources.ResWebsite.lbLog_In</h1>
+                </div>
+                <div class="col-md-12 align-self-center order-1">
+                    <ul class="breadcrumb d-block text-center">
+                        <li><a href="#">@VipAssistProject.Resources.ResWebsite.lbHome</a></li>
+                        <li class="active">@VipAssistProject.Resources.ResWebsite.lbPages</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container py-4">
+
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <h2 class="font-weight-bold text-5 mb-0">@VipAssistProject.Resources.ResWebsite.lbLog_In</h2>
+                <form asp-action="LogInn" id="frmSignIn" method="post" role="form" class="needs-validation">
+                    <div class="row">
+                        <div class="form-group col">
+                            <label class="form-label mb-1 text-2"><p class="m-0">@VipAssistProject.Resources.ResWebsite.lbEmail_address </p></label>
+
+                            <input asp-for="@Model.Email" type="email" class="form-control form-control-lg text-4" required>
+
+                            <span>@ViewBag.one</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <label class="form-label mb-1 text-2"><p class="m-0">@VipAssistProject.Resources.ResWebsite.lbPassword </p></label>
+
+                            <input asp-for="@Model.Password" type="password" value="" class="form-control form-control-lg text-4" required>
+                            @*<span>@ViewBag.two</span>*@
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <p class="text-2 mb-2">@VipAssistProject.Resources.ResWebsite.lbPrivacy <a href="#" class="text-decoration-none">@VipAssistProject.Resources.ResWebsite.lbprivacy_policy_</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <input type="submit" value="LogIn" class="btn btn-dark btn-modern w-100 text-uppercase rounded-0 font-weight-bold text-3 py-3" data-loading-text="Loading..." />
+                            <input type="hidden" asp-for="@Model.ReturnUrl" />
+                            <a asp-action="LogOut">@VipAssistProject.Resources.ResWebsite.lbLog_Out</a>
+
+                        </div>
+                       
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 col-lg-5">
+                <h2 class="font-weight-bold text-5 mb-0">@VipAssistProject.Resources.ResWebsite.lbRegister</h2>
+                <form asp-controller="User" asp-action="Register" id="frmSignUp" method="post" role="form">
+                    <div class="row">
+                        <div class="form-group col">
+                            <label class="form-label mb-1 text-2"><p class="m-0">@VipAssistProject.Resources.ResWebsite.lbUsername or @VipAssistProject.Resources.ResWebsite.lbEmail_address </p></label>
+                            
+                            <input asp-for="@Model.Email" type="email" value="" class="form-control form-control-lg text-4" required>
+
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <label class="form-label mb-1 text-2"><p class="m-0">@VipAssistProject.Resources.ResWebsite.lbPassword </p></label>
+                            <input asp-for="@Model.Password" type="password" value="" class="form-control form-control-lg text-4" required>
+
+                            <span asp-validation-for="@Model.Password"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <p class="text-2 mb-2">@VipAssistProject.Resources.ResWebsite.lbPrivacy <a href="#" class="text-decoration-none">@VipAssistProject.Resources.ResWebsite.lbprivacy_policy_</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <input id="register" type="submit" value=@VipAssistProject.Resources.ResWebsite.lbRegister class="btn btn-dark btn-modern w-100 text-uppercase rounded-0 font-weight-bold text-3 py-3" data-loading-text="Loading..." />
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,105 @@
+[
+  //{
+  //  "outputFileName": "wwwroot/js/site4.min.js",
+  //  "inputFiles": [
+
+  //    "wwwroot/vendor/jquery/jquery.min.js",
+  //    "wwwroot/vendor/jquery.appear/jquery.appear.min.js",
+  //    "wwwroot/vendor/jquery.easing/jquery.easing.min.js",
+  //    "wwwroot/vendor/jquery.cookie/jquery.cookie.min.js"
+
+
+
+  //  ]
+  //},
+  {
+    "outputFileName": "wwwroot/js/site3.min.js",
+    "inputFiles": [
+
+
+
+
+      "wwwroot/vendor/jquery.validation/jquery.validate.min.js",
+      "wwwroot/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js",
+      "wwwroot/vendor/jquery.gmap/jquery.gmap.min.js",
+      "wwwroot/vendor/lazysizes/lazysizes.min.js",
+      "wwwroot/vendor/isotope/jquery.isotope.min.js",
+      "wwwroot/vendor/owl.carousel/owl.carousel.min.js",
+      "wwwroot/vendor/magnific-popup/jquery.magnific-popup.min.js",
+      "wwwroot/vendor/vide/jquery.vide.min.js",
+      "wwwroot/vendor/vivus/vivus.min.js",
+      "wwwroot/vendor/bootstrap-star-rating/js/star-rating.min.js",
+      "wwwroot/vendor/bootstrap-star-rating/themes/krajee-fas/theme.min.js",
+      "wwwroot/vendor/jquery.countdown/jquery.countdown.min.js",
+      "wwwroot/js/theme.js",
+
+      "wwwroot/js/views/view.shop.js",
+      "wwwroot/vendor/circle-flip-slideshow/js/jquery.flipshow.min.js",
+      "wwwroot/js/views/view.home.js",
+      "wwwroot/js/demos/demo-seo-2.js",
+
+      "wwwroot/js/custom.js",
+      "wwwroot/js/theme.init.js"
+      
+
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/site1.min.css",
+    "inputFiles": [
+      "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CShadows+Into+Light&display=swap",
+      "wwwroot/vendor/bootstrap/css/bootstrap.min.css",
+      "wwwroot/vendor/fontawesome-free/css/all.min.css",
+      "wwwroot/vendor/animate/animate.compat.css",
+      "wwwroot/vendor/simple-line-icons/css/simple-line-icons.min.css",
+      "wwwroot/vendor/owl.carousel/assets/owl.carousel.min.css",
+      "wwwroot/vendor/owl.carousel/assets/owl.theme.default.min.css",
+      "wwwroot/vendor/magnific-popup/magnific-popup.min.css",
+      "wwwroot/vendor/bootstrap-star-rating/css/star-rating.min.css",
+      "wwwroot/vendor/bootstrap-star-rating/themes/krajee-fas/theme.min.css",
+      "wwwroot/css/theme.css"
+
+
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/site2.min.css",
+    "inputFiles": [
+      
+      "wwwroot/css/theme-blog.css",
+      "wwwroot/css/theme-shop.css",
+      "wwwroot/vendor/circle-flip-slideshow/css/component.css",
+      "wwwroot/css/demos/demo-seo-2.css",
+      "wwwroot/css/skins/default.css",
+      "wwwroot/css/custom.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.min.js",
+    "inputFiles": [
+
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]
+
+
+
+   
+   
+    
+    
+    
+  
+    
+    
+    
+   
+    
+    
+    
+  

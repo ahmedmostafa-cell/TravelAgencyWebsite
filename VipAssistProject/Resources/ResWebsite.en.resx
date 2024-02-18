@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lbLanguage" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="lbArabic" xml:space="preserve">
+    <value>Arabic</value>
+  </data>
+  <data name="lbEnglish" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="lbAbout" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="lbAbout Us" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="lbAlready have an account?" xml:space="preserve">
+    <value>Already have an account?</value>
+  </data>
+  <data name="lbAnd More" xml:space="preserve">
+    <value>And More</value>
+  </data>
+  <data name="lbBook Now" xml:space="preserve">
+    <value>Book Now</value>
+  </data>
+  <data name="lbCheckout" xml:space="preserve">
+    <value>Checkout</value>
+  </data>
+  <data name="lbClient Say" xml:space="preserve">
+    <value>Client’s Say</value>
+  </data>
+  <data name="lbComplete the form below to receive an email with the authorization code needed to reset your password." xml:space="preserve">
+    <value>Complete the form below to receive an email with the authorization code needed to reset your password.</value>
+  </data>
+  <data name="lbContact Us" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="lbDon't have an account yet? SIGN UP" xml:space="preserve">
+    <value>Don't have an account yet? SIGN UP</value>
+  </data>
+  <data name="lbEmail address" xml:space="preserve">
+    <value>Email address</value>
+  </data>
+  <data name="lbFeatures" xml:space="preserve">
+    <value>Features</value>
+  </data>
+  <data name="lbFeel free to ask for details, don't save any questions!" xml:space="preserve">
+    <value>Feel free to ask for details, don't save any questions!</value>
+  </data>
+  <data name="lbGet In Touch" xml:space="preserve">
+    <value>Get In Touch</value>
+  </data>
+  <data name="lbHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="lbLatest" xml:space="preserve">
+    <value>Latest</value>
+  </data>
+  <data name="lbLearn More" xml:space="preserve">
+    <value>Learn More</value>
+  </data>
+  <data name="lbLog In" xml:space="preserve">
+    <value>LogIn</value>
+  </data>
+  <data name="lbLog Out" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
+  <data name="lbLOST YOUR PASSWORD?" xml:space="preserve">
+    <value>LOST YOUR PASSWORD?</value>
+  </data>
+  <data name="lbMy Orders" xml:space="preserve">
+    <value>My Orders</value>
+  </data>
+  <data name="lbMy Profile" xml:space="preserve">
+    <value>My Profile</value>
+  </data>
+  <data name="lbOur" xml:space="preserve">
+    <value>Our</value>
+  </data>
+  <data name="lbOur Clients" xml:space="preserve">
+    <value>Our Clients</value>
+  </data>
+  <data name="lbOUR MISSION" xml:space="preserve">
+    <value>OUR MISSION</value>
+  </data>
+  <data name="lbOUR VISION" xml:space="preserve">
+    <value>OUR VISION</value>
+  </data>
+  <data name="lbPages" xml:space="preserve">
+    <value>Pages</value>
+  </data>
+  <data name="lbPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="lbPosts" xml:space="preserve">
+    <value>Posts</value>
+  </data>
+  <data name="lbRemember Me" xml:space="preserve">
+    <value>Remember Me</value>
+  </data>
+  <data name="lbReset My Password" xml:space="preserve">
+    <value>Reset My Password</value>
+  </data>
+  <data name="lbServices" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="lbSign In" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="lbTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="lbView Cart" xml:space="preserve">
+    <value>View Cart</value>
+  </data>
+  <data name="lbView More" xml:space="preserve">
+    <value>View More</value>
+  </data>
+  <data name="lbWe Are" xml:space="preserve">
+    <value>We Are</value>
+  </data>
+  <data name="lbWhat" xml:space="preserve">
+    <value>What</value>
+  </data>
+  <data name="lbWho" xml:space="preserve">
+    <value>Who</value>
+  </data>
+  <data name="lbWHY US" xml:space="preserve">
+    <value>WHY US</value>
+  </data>
+  <data name="lbYour message has been sent to us." xml:space="preserve">
+    <value>Your message has been sent to us.</value>
+  </data>
+  <data name="lbAddress" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="lbBusiness" xml:space="preserve">
+    <value>Business</value>
+  </data>
+  <data name="lbCart" xml:space="preserve">
+    <value>Cart</value>
+  </data>
+  <data name="lbForgot" xml:space="preserve">
+    <value>Forgot</value>
+  </data>
+  <data name="lbFull Name" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="lbGet In" xml:space="preserve">
+    <value>Get In</value>
+  </data>
+  <data name="lbHours" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="lbMessage" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="lbOffice" xml:space="preserve">
+    <value>Office</value>
+  </data>
+  <data name="lbOrder Complete" xml:space="preserve">
+    <value>Order Complete</value>
+  </data>
+  <data name="lbPayment Methods" xml:space="preserve">
+    <value>Payment Methods</value>
+  </data>
+  <data name="lbPhone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="lbPlaceOrder" xml:space="preserve">
+    <value>PlaceOrder</value>
+  </data>
+  <data name="lbPlease enter the subject." xml:space="preserve">
+    <value>Please enter the subject.</value>
+  </data>
+  <data name="lbPlease enter your email address." xml:space="preserve">
+    <value>Please enter your email address.</value>
+  </data>
+  <data name="lbPlease enter your message." xml:space="preserve">
+    <value>Please enter your message.</value>
+  </data>
+  <data name="lbPlease enter your name." xml:space="preserve">
+    <value>Please enter your name.</value>
+  </data>
+  <data name="lbPrice" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="lbPrivacy" xml:space="preserve">
+    <value>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our</value>
+  </data>
+  <data name="lbprivacy policy." xml:space="preserve">
+    <value>privacy policy.</value>
+  </data>
+  <data name="lbProceed to" xml:space="preserve">
+    <value>Proceed to</value>
+  </data>
+  <data name="lbProduct" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="lbQuantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="lbRegister" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="lbSend Message" xml:space="preserve">
+    <value>Send Message</value>
+  </data>
+  <data name="lbShopping Cart" xml:space="preserve">
+    <value>Shopping Cart</value>
+  </data>
+  <data name="lbSubject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="lbSubtotal" xml:space="preserve">
+    <value>Subtotal</value>
+  </data>
+  <data name="lbTouch" xml:space="preserve">
+    <value>Touch</value>
+  </data>
+  <data name="lbUsername" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="lbYour Order" xml:space="preserve">
+    <value>Your Order</value>
+  </data>
+  <data name="lbaboutAccolade" xml:space="preserve">
+    <value>about AccoladeConcierge Services</value>
+  </data>
+  <data name="lbAglobalairport" xml:space="preserve">
+    <value>a global airport concierge service,</value>
+  </data>
+  <data name="lbAirport" xml:space="preserve">
+    <value>Airport Agents are certified handling company operators and have access to all airport areas,including airside,guranteeing top efficiency in all airport procedures.</value>
+  </data>
+  <data name="lbBringing" xml:space="preserve">
+    <value>bringing to life your idea of</value>
+  </data>
+  <data name="lbBuggy" xml:space="preserve">
+    <value>Buggy</value>
+  </data>
+  <data name="lbBuild" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="lbCreate" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="lbcustomer experience" xml:space="preserve">
+    <value>customer experience.</value>
+  </data>
+  <data name="lbDevelop" xml:space="preserve">
+    <value>Develop</value>
+  </data>
+  <data name="lbDocuments" xml:space="preserve">
+    <value>Documents</value>
+  </data>
+  <data name="lbespecially" xml:space="preserve">
+    <value>especially</value>
+  </data>
+  <data name="lbexcited" xml:space="preserve">
+    <value>excited</value>
+  </data>
+  <data name="lbExclusiveand" xml:space="preserve">
+    <value>exclusive and</value>
+  </data>
+  <data name="lbextremely" xml:space="preserve">
+    <value>extremely</value>
+  </data>
+  <data name="lbFastTrack" xml:space="preserve">
+    <value>Fast Track to the comfort of your airline lounge by electric buggy.</value>
+  </data>
+  <data name="lbGetStartedNow" xml:space="preserve">
+    <value>Get Started Now</value>
+  </data>
+  <data name="lbGreetings" xml:space="preserve">
+    <value>Greetings</value>
+  </data>
+  <data name="lbhappy" xml:space="preserve">
+    <value>happy</value>
+  </data>
+  <data name="lbHappyClients" xml:space="preserve">
+    <value>Happy Clients</value>
+  </data>
+  <data name="lbincredibly" xml:space="preserve">
+    <value>incredibly</value>
+  </data>
+  <data name="lblarge" xml:space="preserve">
+    <value>large corporate base in 6 continents</value>
+  </data>
+  <data name="lbluxurioustravel!" xml:space="preserve">
+    <value>luxurious travel!</value>
+  </data>
+  <data name="lbLuxury" xml:space="preserve">
+    <value>Luxury concierge service based in London with a large client base throughout the world.</value>
+  </data>
+  <data name="lbMeet" xml:space="preserve">
+    <value>Meet and Greet Service</value>
+  </data>
+  <data name="lbOur teamis" xml:space="preserve">
+    <value>Our team is ready to help you 24/7 with any queries you may have, to ensure you have a stress free time at the airport. Please contact us to discuss your specific airport requirements.</value>
+  </data>
+  <data name="lbOurteam" xml:space="preserve">
+    <value>Our team will take care of every thing,while you relax.</value>
+  </data>
+  <data name="lbOver1000" xml:space="preserve">
+    <value>Over 1000 Customers in 100 Countries use AccoladeConcierge Services. Meet our Customers.</value>
+  </data>
+  <data name="lbrequeststaken" xml:space="preserve">
+    <value>requests taken</value>
+  </data>
+  <data name="lbSatisfied" xml:space="preserve">
+    <value>satisfied users, AccoladeConcierge is a huge success in the one of largest world's MarketPlace</value>
+  </data>
+  <data name="lbSolutions" xml:space="preserve">
+    <value>Solutions</value>
+  </data>
+  <data name="lbTHE" xml:space="preserve">
+    <value>THE ULTIMATE AIRPORT EXPERIENCE</value>
+  </data>
+  <data name="lbTransportation" xml:space="preserve">
+    <value>Transportation</value>
+  </data>
+  <data name="lbTrusted" xml:space="preserve">
+    <value>Trusted by over</value>
+  </data>
+  <data name="lbVipair" xml:space="preserve">
+    <value>Vip air-side &amp; curbside</value>
+  </data>
+  <data name="lbWe'renot" xml:space="preserve">
+    <value>We're not the only ones</value>
+  </data>
+  <data name="lbWeprovide" xml:space="preserve">
+    <value>We provide our clients with a portfolio of services that is uncompromising, our different services are implemented carefully to make sure our clients every desires are met.</value>
+  </data>
+  <data name="lbWespecialise" xml:space="preserve">
+    <value>We specialise in every travel, lifestyle and leisure need in London, while ensuring we maintain the highest quality of service by operating your transportation needs under the group umbrella.</value>
+  </data>
+  <data name="lbWeWe" xml:space="preserve">
+    <value>We are AccoladeConcierge, We</value>
+  </data>
+  <data name="lbYearsInBusiness" xml:space="preserve">
+    <value>Years In Business</value>
+  </data>
+  <data name="lbBookThirdParty" xml:space="preserve">
+    <value>Book Third Party</value>
+  </data>
+  <data name="lbFaq" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="lbFrequentlyAsked" xml:space="preserve">
+    <value>Frequently Asked</value>
+  </data>
+  <data name="lbQuestions" xml:space="preserve">
+    <value>Questions</value>
+  </data>
+  <data name="lbWeProvide2" xml:space="preserve">
+    <value>FORGET STRESSFUL TRAVEL PLANS AND LET US GUIDE YOUR VIP EXPERIENCE. FROM DEPARTURE TO ARRIVAL OUR DEDICATED TEAM WILL MAKE YOUR EXPERIENCE AS SMOOTH AS POSSIBLE.</value>
+  </data>
+  <data name="lbNoDataAvailable" xml:space="preserve">
+    <value>No Data Are Available</value>
+  </data>
+  <data name="lbTestimonials" xml:space="preserve">
+    <value>View our client testimonials. ... Here's what they're saying about us.</value>
+  </data>
+  <data name="lbLifeChat" xml:space="preserve">
+    <value>Life Chat</value>
+  </data>
+  <data name="lbAirpot" xml:space="preserve">
+    <value>Airport</value>
+  </data>
+  <data name="lbGreet" xml:space="preserve">
+    <value>Greet</value>
+  </data>
+  <data name="lbMeetName" xml:space="preserve">
+    <value>Meet</value>
+  </data>
+  <data name="lbLocations" xml:space="preserve">
+    <value>Locations</value>
+  </data>
+  <data name="lbBagQty" xml:space="preserve">
+    <value>Bag Qty</value>
+  </data>
+  <data name="lbCarName" xml:space="preserve">
+    <value>Car Name</value>
+  </data>
+  <data name="lbFlightDate" xml:space="preserve">
+    <value>Flight   Date</value>
+  </data>
+  <data name="lbFlightName" xml:space="preserve">
+    <value>Flight   Name</value>
+  </data>
+  <data name="lbFlightStatus" xml:space="preserve">
+    <value>Flight   Status</value>
+  </data>
+  <data name="lbInfantQty" xml:space="preserve">
+    <value>Infant Qty</value>
+  </data>
+  <data name="lbPersonQty" xml:space="preserve">
+    <value>Person Qty</value>
+  </data>
+</root>

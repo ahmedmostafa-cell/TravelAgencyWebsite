@@ -1,0 +1,1535 @@
+﻿
+@model HomePageModel
+   
+
+    
+   
+    @*<div class="col-sm-6 col-md-4 col-lg-3 sample-icon" style="  position: fixed;
+                    top: 90%; left:95%">
+            <a asp-controller="Home" asp-action="NewChat7"><i class="icon-people icons"></i><span class="name">people</span></a>
+        </div>*@
+    @*<div class="call-to-action-btn">
+            <a asp-controller="Home" asp-action="CheckNotifications" style="  position: fixed;
+                    top: 90%; left:95%" class="btn btn-modern text-2 btn-primary">Buy Now</a><span class="arrow hlb d-none d-md-block appear-animation animated rotateInUpLeft appear-animation-visible" data-appear-animation="rotateInUpLeft" style="left: 100%; top: -32px; animation-delay: 100ms;"></span>
+        </div>*@
+
+    @*<span class="text-primary text-8 position-relative top-3 mt-3"><a class="far fa-comments" asp-controller="Home" asp-action="NewChat7" style="  position: fixed;
+        top: 90%; left:95%"></a></span>*@
+
+    
+
+<div role="main" class="main">
+
+
+
+
+    <section class="section section-height-3 bg-color-grey-scale-1 m-0 border-0">
+
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-6 pb-sm-4 pb-lg-0 pe-lg-5 mb-sm-5 mb-lg-0">
+                    <h2 class="text-color-dark font-weight-normal text-6 mb-2" style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">@VipAssistProject.Resources.ResWebsite.lbWho <strong class="font-weight-extra-bold">@VipAssistProject.Resources.ResWebsite.lbWe_Are</strong></h2>
+                    <p class="lead pe-lg-5 me-lg-5" style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">@VipAssistProject.Resources.ResWebsite.lbTHE </p>
+                    <p style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">@VipAssistProject.Resources.ResWebsite.lbOurteam</p>
+                    <p style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">@VipAssistProject.Resources.ResWebsite.lbAirport</p>
+                    <p style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">@VipAssistProject.Resources.ResWebsite.lbFastTrack</p>
+                    <a asp-controller="Home" asp-action="AboutUs" class="btn btn-dark font-weight-semibold btn-px-4 btn-py-2 text-2">@VipAssistProject.Resources.ResWebsite.lbLearn_More</a>
+                </div>
+                <div class="col-sm-8 col-md-6 col-lg-4 offset-sm-4 offset-md-4 offset-lg-2 position-relative mt-sm-5" style="top: 1.7rem;">
+                    <div class="container">
+
+
+                        <div id="examples" class="container py-2">
+                            <div class="row">
+                                <div class="col">
+
+
+
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="row mt-lg-5">
+                                                <div class="col-lg-4">
+                                                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
+                                                        <span class="thumb-info-wrapper">
+                                                            <img src="~/img/slides/164184.jpg" class="appear-animation box-shadow-3 d-none d-sm-block" width="250" alt="" data-appear-animation="expandIn" data-appear-animation-duration="600ms" />
+                                                        </span>
+                                                        <span class="thumb-info-wrapper">
+                                                            <img src="~/img/slides/318288.jpg" class="appear-animation box-shadow-3 d-none d-sm-block" width="250" alt="" data-appear-animation="expandIn" data-appear-animation-delay="300" data-appear-animation-duration="600ms" />
+                                                        </span>
+                                                        <span class="thumb-info-wrapper">
+
+                                                            <img src="~/img/slides/212186.jpg" class="appear-animation box-shadow-3" width="250" alt="" data-appear-animation="expandIn" data-appear-animation-delay="600" data-appear-animation-duration="600ms" />
+                                                        </span>
+                                                    </span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="section section-height-3 bg-color-grey-scale-1 m-0 border-0">
+        @*<div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6 pb-sm-4 pb-lg-0 pe-lg-5 mb-sm-5 mb-lg-0">
+                        <h2 class="text-color-dark font-weight-normal text-6 mb-2">Who <strong class="font-weight-extra-bold">We Are</strong></h2>
+                        <p class="lead pe-lg-5 me-lg-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit massa enim. Nullam id varius nunc. </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bibendum magna ex, et faucibus lacus venenatis eget</p>
+                        <a href="#" class="btn btn-dark font-weight-semibold btn-px-4 btn-py-2 text-2">LEARN MORE</a>
+                    </div>
+                    <div class="col-sm-8 col-md-6 col-lg-4 offset-sm-4 offset-md-4 offset-lg-2 position-relative mt-sm-5" style="top: 1.7rem;">
+                        <img src="img/generic/generic-corporate-3-1.jpg" class="img-fluid position-absolute d-none d-sm-block appear-animation animated expandIn appear-animation-visible" data-appear-animation="expandIn" data-appear-animation-delay="300" style="top: 10%; left: -50%; animation-delay: 300ms;" alt="">
+                        <img src="img/generic/generic-corporate-3-2.jpg" class="img-fluid position-absolute d-none d-sm-block appear-animation animated expandIn appear-animation-visible" data-appear-animation="expandIn" style="top: -33%; left: -29%; animation-delay: 100ms;" alt="">
+                        <img src="img/generic/generic-corporate-3-3.jpg" class="img-fluid position-relative appear-animation mb-2 animated expandIn appear-animation-visible" data-appear-animation="expandIn" data-appear-animation-delay="600" alt="" style="animation-delay: 600ms;">
+                    </div>
+                </div>
+            </div>*@
+    </section>
+
+
+
+    @*<div style="        height: 1100px
+        " class="bgimg-2">
+                <div class="caption">
+                    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
+                </div>
+            </div>*@
+
+
+    <div class="bgimg-3">
+        <div class="caption">
+            <span class="word-rotator slide font-weight-bold text-8 mb-3 appear-animation animated appear-animation-visible" style="background-color:white;font-family: 'Poppins' , sans-serif; line-height: 1.6; color:black ">@VipAssistProject.Resources.ResWebsite.lbTHE</span>
+        </div>
+    </div>
+
+
+    @*<div style="        height: 1100px
+        " class="bgimg-2">
+                <div class="caption">
+                    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
+                </div>
+            </div>*@
+
+
+    <div class="container py-4">
+
+        <div class="row">
+            <div class="col-md-6 mb-30 animate-box fadeInUp animated" data-animate-effect="fadeInUp">
+                <h1 class="mb-0 font-weight-normal" style="letter-spacing: 3px; text-transform: uppercase; ">
+                    @VipAssistProject.Resources.ResWebsite.lbAirpot
+                    <br />
+                    <span><strong class="font-weight-extra-bold"> @VipAssistProject.Resources.ResWebsite.lbMeetName &amp; @VipAssistProject.Resources.ResWebsite.lbGreet</strong></span>
+                </h1>
+                <br />
+                @*<h2 class="section-title">Airport <span>Meet &amp; Assist</span></h2>*@
+                <p>@VipAssistProject.Resources.ResWebsite.lbTHE</p>
+                <br />
+                <br />
+                <p style="font-size: 20px;">@VipAssistProject.Resources.ResWebsite.lbOurteam</p>
+                <p style="font-size: 20px;">@VipAssistProject.Resources.ResWebsite.lbAirport</p>
+                <p style="font-size: 20px;">@VipAssistProject.Resources.ResWebsite.lbFastTrack</p>
+                <div class="call-to-action-btn">
+                    <a asp-controller="ServiceDetails" asp-action="Test2" asp-route-id="54c1bacb-a8b7-49ac-ac9a-c2e6aa15389a" class="btn btn-modern text-2 btn-primary">@VipAssistProject.Resources.ResWebsite.lbBook_Now</a>
+                </div>
+            </div>
+            <div class="col-md-5 order-md-2 mb-4 mb-lg-0 appear-animation animated fadeInRightShorter appear-animation-visible" data-appear-animation="fadeInRightShorter" style="animation-delay: 100ms;">
+
+                <h5 class="text-uppercase mt-4">MEET &amp; GREET</h5>
+                <div class="hover-effect-3d" style="perspective: 1000px; transform-style: preserve-3d;">
+                    <div class="thumb-info thumb-info-hide-wrapper-bg thumb-info-no-borders-rounded" style="perspective: 1000px; transform-style: preserve-3d; transform: rotateX(0deg) rotateY(0deg);">
+                        <div class="thumb-info-wrapper">
+                            <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                           
+                            @*<div class="thumb-info-action">
+                                <a href="#">
+                                    <div class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-play-circle text-dark text-dark"></i></div>
+                                </a>
+                                <a href="portfolio-single-wide-slider.html">
+                                    <div class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></div>
+                                </a>
+                            </div>*@
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    @*<div class="col-lg-4">
+        <h5 class="text-uppercase mt-4">HOVER 3D + CENTERED ICONS</h5>
+        <div class="hover-effect-3d" style="perspective: 1000px; transform-style: preserve-3d;">
+            <div class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-icons" style="perspective: 1000px; transform-style: preserve-3d; transform: rotateX(0deg) rotateY(0deg);">
+                <div class="thumb-info-wrapper">
+                    <img src="img/blog/square/blog-9.jpg" class="img-fluid" alt="">
+                    <div class="thumb-info-action">
+                        <a href="#">
+                            <div class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-play-circle text-dark text-dark"></i></div>
+                        </a>
+                        <a href="portfolio-single-wide-slider.html">
+                            <div class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="examples" class="container py-2">
+
+        <div class="row">
+            <div class="col">
+
+                <div class="row">
+                    <div class="col">
+
+                        <h4 class="mb-0">Default</h4>
+                        <p>By default, thumbnails are designed to showcase linked images with minimal required markup.</p>
+
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <img class="img-fluid rounded mb-4" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="Project Image">
+                            </div>
+                            <div class="col-lg-3">
+                                <img class="img-fluid mb-4 border-radius-0" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="Project Image">
+                            </div>
+                            <div class="col-lg-3">
+                                <img class="img-fluid rounded-circle mb-4" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="Project Image">
+                            </div>
+                            <div class="col-lg-3">
+                                <span class="img-thumbnail d-block">
+                                    <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="Project Image">
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <hr class="solid my-5">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+
+                        <h4 class="mb-0">Hover Styles</h4>
+                        <p>The thumbnail details can be displayed in different styles.</p>
+
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Default</h5>
+                                <a href="portfolio-single-wide-slider.html">
+                                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                            <span class="thumb-info-action">
+                                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Default Lighten</h5>
+                                <a href="portfolio-single-wide-slider.html">
+                                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                            <span class="thumb-info-action">
+                                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">No Zoom</h5>
+                                <a href="portfolio-single-wide-slider.html">
+                                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-no-zoom">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                            <span class="thumb-info-action">
+                                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row mt-lg-5">
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">With Title and Type</h5>
+                                <a href="portfolio-single-wide-slider.html">
+                                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                            <span class="thumb-info-title">
+                                                <span class="thumb-info-inner">Project Title</span>
+                                                <span class="thumb-info-type">Project Type</span>
+                                            </span>
+                                            <span class="thumb-info-action">
+                                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Centered Icons</h5>
+
+                                <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-icons">
+                                    <span class="thumb-info-wrapper">
+                                        <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                        <span class="thumb-info-action">
+                                            <a href="#">
+                                                <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-play-circle text-dark text-dark"></i></span>
+                                            </a>
+                                            <a href="portfolio-single-wide-slider.html">
+                                                <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+                                            </a>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Icons Colors</h5>
+
+                                <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-icons">
+                                    <span class="thumb-info-wrapper">
+                                        <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                        <span class="thumb-info-action">
+                                            <a href="#">
+                                                <span class="thumb-info-action-icon thumb-info-action-icon-primary" title=""><i class="fas fa-play-circle"></i></span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="thumb-info-action-icon thumb-info-action-icon-secondary" title=""><i class="fas fa-plus"></i></span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="thumb-info-action-icon thumb-info-action-icon-tertiary" title=""><i class="fas fa-link"></i></span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-play-circle text-dark"></i></span>
+                                            </a>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row mt-lg-5">
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Centered Info</h5>
+                                <a href="portfolio-single-wide-slider.html">
+                                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-info">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                            <span class="thumb-info-title">
+                                                <span class="thumb-info-inner">Project Title <em>09/19/2021</em></span>
+                                                <span class="thumb-info-type">Project Type</span>
+                                            </span>
+                                            <span class="thumb-info-action">
+                                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Bottom Info Light</h5>
+                                <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
+                                    <span class="thumb-info-wrapper">
+                                        <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                        <span class="thumb-info-title">
+                                            <span class="thumb-info-inner line-height-1 font-weight-bold text-dark position-relative top-3">Project Title</span>
+                                            <span class="thumb-info-type">Project Type</span>
+                                        </span>
+                                        <span class="thumb-info-action">
+                                            <a href="#">
+                                                <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-play-circle text-dark text-dark"></i></span>
+                                            </a>
+                                            <a href="portfolio-single-wide-slider.html">
+                                                <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+                                            </a>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Bottom Info Dark</h5>
+                                <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-centered-icons">
+                                    <span class="thumb-info-wrapper">
+                                        <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                        <span class="thumb-info-title">
+                                            <span class="thumb-info-inner line-height-1">Project Title</span>
+                                            <span class="thumb-info-type opacity-6">Project Type</span>
+                                        </span>
+                                        <span class="thumb-info-action">
+                                            <a href="#">
+                                                <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-play-circle text-dark text-dark"></i></span>
+                                            </a>
+                                            <a href="portfolio-single-wide-slider.html">
+                                                <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+                                            </a>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-lg-5">
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Bottom Info Light Linear</h5>
+                                <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-bottom-info-linear thumb-info-centered-icons">
+                                    <span class="thumb-info-wrapper">
+                                        <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                        <span class="thumb-info-title">
+                                            <span class="thumb-info-inner line-height-1 font-weight-bold text-dark position-relative top-3">Project Title</span>
+                                            <span class="thumb-info-type">Project Type</span>
+                                        </span>
+                                        <span class="thumb-info-action">
+                                            <a href="#">
+                                                <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-play-circle text-dark text-dark"></i></span>
+                                            </a>
+                                            <a href="portfolio-single-wide-slider.html">
+                                                <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+                                            </a>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Bottom Info Dark Linear</h5>
+                                <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-dark-linear thumb-info-centered-icons">
+                                    <span class="thumb-info-wrapper">
+                                        <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                        <span class="thumb-info-title">
+                                            <span class="thumb-info-inner line-height-1">Project Title</span>
+                                            <span class="thumb-info-type">Project Type</span>
+                                        </span>
+                                        <span class="thumb-info-action">
+                                            <a href="#">
+                                                <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-play-circle text-dark text-dark"></i></span>
+                                            </a>
+                                            <a href="portfolio-single-wide-slider.html">
+                                                <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+                                            </a>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Bottom Info Show More</h5>
+                                <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-bottom-info-dark thumb-info-bottom-info-show-more thumb-info-no-zoom">
+                                    <span class="thumb-info-wrapper">
+                                        <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                        <span class="thumb-info-title">
+                                            <span class="thumb-info-inner line-height-1">Project Title</span>
+                                            <span class="thumb-info-type opacity-8">Project Type</span>
+                                            <span class="thumb-info-show-more-content opacity-7"><p class="mb-0 text-1 line-height-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p></span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-lg-5">
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Push Horizontally</h5>
+                                <a href="portfolio-single-wide-slider.html">
+                                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-centered-info thumb-info-push-hor">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                            <span class="thumb-info-title">
+                                                <span class="thumb-info-inner">Project Title</span>
+                                                <span class="thumb-info-type">Project Type</span>
+                                            </span>
+                                            <span class="thumb-info-action">
+                                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4">
+
+                                <h5 class="text-uppercase mt-4">With Captions</h5>
+                                <span class="thumb-info thumb-info-hide-wrapper-bg">
+                                    <span class="thumb-info-wrapper">
+                                        <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                        <span class="thumb-info-title">
+                                            <span class="thumb-info-inner">Project Title</span>
+                                            <span class="thumb-info-type">Project Type</span>
+                                        </span>
+                                    </span>
+                                    <span class="thumb-info-caption">
+                                        <span class="thumb-info-caption-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                                        <span class="thumb-info-social-icons">
+                                            <a target="_blank" href="http://www.facebook.com"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+                                            <a href="http://www.twitter.com"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+                                            <a href="http://www.linkedin.com"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a>
+                                        </span>
+                                    </span>
+                                </span>
+
+                            </div>
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Hide Info Hover</h5>
+                                <a href="portfolio-single-wide-slider.html">
+                                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-info thumb-info-hide-info-hover">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                            <span class="thumb-info-title">
+                                                <span class="thumb-info-inner">Project Title</span>
+                                                <span class="thumb-info-type">Project Type</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-lg-5">
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Slide Info Hover Type</h5>
+                                <a href="portfolio-single-wide-slider.html">
+                                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-info thumb-info-no-zoom thumb-info-slide-info-hover">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                            <span class="thumb-info-title">
+                                                <span class="thumb-info-slide-info-hover-1">
+                                                    <span class="thumb-info-inner text-1 text-uppercase">Project Title</span>
+                                                </span>
+                                                <span class="thumb-info-slide-info-hover-2">
+                                                    <span class="thumb-info-type">Project Type</span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Slide Info Hover Button</h5>
+                                <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-info thumb-info-no-zoom thumb-info-slide-info-hover">
+                                    <span class="thumb-info-wrapper">
+                                        <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                        <span class="thumb-info-title">
+                                            <span class="thumb-info-slide-info-hover-1">
+                                                <span class="thumb-info-inner text-1 text-uppercase">Project Title</span>
+                                            </span>
+                                            <span class="thumb-info-slide-info-hover-2">
+                                                <span class="thumb-info-inner text-2">
+                                                    <a href="#" class="btn btn-primary btn-modern text-1">Button</a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Slide Info Hover Centered Icons</h5>
+                                <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-info thumb-info-no-zoom thumb-info-centered-icons thumb-info-slide-info-hover">
+                                    <span class="thumb-info-wrapper">
+                                        <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                        <span class="thumb-info-title">
+                                            <span class="thumb-info-slide-info-hover-1">
+                                                <span class="thumb-info-inner text-1 text-uppercase">Project Title</span>
+                                            </span>
+                                            <span class="thumb-info-slide-info-hover-2">
+                                                <span class="thumb-info-action">
+                                                    <a href="#">
+                                                        <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-play-circle text-dark text-dark"></i></span>
+                                                    </a>
+                                                    <a href="portfolio-single-wide-slider.html">
+                                                        <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+                                                    </a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-lg-5">
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Light Block Hover</h5>
+                                <a href="portfolio-single-wide-slider.html">
+                                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-centered-info thumb-info-block">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                            <span class="thumb-info-title">
+                                                <span class="thumb-info-inner text-dark">Project Title</span>
+                                                <span class="thumb-info-type">Project Type</span>
+                                            </span>
+                                            <span class="thumb-info-action">
+                                                <span class="thumb-info-action-icon bg-transparent"><i class="fas fa-plus text-primary"></i></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Dark Block Hover</h5>
+                                <a href="portfolio-single-wide-slider.html">
+                                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-centered-info thumb-info-block thumb-info-block-dark">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                            <span class="thumb-info-title">
+                                                <span class="thumb-info-inner">Project Title</span>
+                                                <span class="thumb-info-type">Project Type</span>
+                                            </span>
+                                            <span class="thumb-info-action">
+                                                <span class="thumb-info-action-icon bg-transparent"><i class="fas fa-plus text-primary"></i></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">Color Block Hover</h5>
+                                <a href="portfolio-single-wide-slider.html">
+                                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-centered-info thumb-info-block thumb-info-block-primary">
+                                        <span class="thumb-info-wrapper">
+                                            <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                            <span class="thumb-info-title">
+                                                <span class="thumb-info-inner">Project Title</span>
+                                                <span class="thumb-info-type bg-color-dark">Project Type</span>
+                                            </span>
+                                            <span class="thumb-info-action">
+                                                <span class="thumb-info-action-icon bg-transparent"><i class="fas fa-plus text-light"></i></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-lg-5">
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">HOVER 3D</h5>
+                                <div class="hover-effect-3d" style="perspective: 1000px; transform-style: preserve-3d;">
+                                    <a href="portfolio-single-wide-slider.html">
+                                        <div class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded" style="perspective: 1000px; transform-style: preserve-3d; transform: rotateX(0deg) rotateY(0deg);">
+                                            <div class="thumb-info-wrapper">
+                                                <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                                <div class="thumb-info-action">
+                                                    <div class="thumb-info-action-icon"><i class="fas fa-plus"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">HOVER 3D + CENTERED INFO</h5>
+                                <div class="hover-effect-3d" style="perspective: 1000px; transform-style: preserve-3d;">
+                                    <a href="portfolio-single-wide-slider.html">
+                                        <div class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-info" style="perspective: 1000px; transform-style: preserve-3d; transform: rotateX(0deg) rotateY(0deg);">
+                                            <div class="thumb-info-wrapper">
+                                                <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                                <div class="thumb-info-title">
+                                                    <div class="thumb-info-inner">Project Title <em>09/19/2021</em></div>
+                                                    <div class="thumb-info-type">Project Type</div>
+                                                </div>
+                                                <div class="thumb-info-action">
+                                                    <div class="thumb-info-action-icon"><i class="fas fa-plus"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">HOVER 3D + CENTERED ICONS</h5>
+                                <div class="hover-effect-3d" style="perspective: 1000px; transform-style: preserve-3d;">
+                                    <div class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-icons" style="perspective: 1000px; transform-style: preserve-3d; transform: rotateX(0deg) rotateY(0deg);">
+                                        <div class="thumb-info-wrapper">
+                                            <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                            <div class="thumb-info-action">
+                                                <a href="#">
+                                                    <div class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-play-circle text-dark text-dark"></i></div>
+                                                </a>
+                                                <a href="portfolio-single-wide-slider.html">
+                                                    <div class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-lg-5">
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">HOVER FLOATING CAPTION</h5>
+                                <a href="portfolio-single-wide-slider.html">
+                                    <div class="thumb-info thumb-info-floating-caption thumb-info-hide-wrapper-bg" data-title="Project Title">
+                                        <div class="thumb-info-wrapper">
+                                            <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">HOVER FLOATING CAPTION + TYPE</h5>
+                                <a href="portfolio-single-wide-slider.html">
+                                    <div class="thumb-info thumb-info-floating-caption thumb-info-hide-wrapper-bg" data-title="Project Title" data-type="PROJECT TYPE">
+                                        <div class="thumb-info-wrapper">
+                                            <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <h5 class="text-uppercase mt-4">HOVER FLOATING CAPTION CLEAN</h5>
+                                <a href="portfolio-single-wide-slider.html">
+                                    <div class="thumb-info thumb-info-floating-caption thumb-info-floating-caption-clean" data-title="Project Title" data-type="PROJECT TYPE">
+                                        <div class="thumb-info-wrapper">
+                                            <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-lg-5">
+
+                            <div class="col-lg-6">
+
+                                <h5 class="text-uppercase mt-4">Side Image Left</h5>
+                                <div class="thumb-info thumb-info-side-image thumb-info-no-zoom">
+                                    <div class="thumb-info-side-image-wrapper">
+                                        <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="" style="width: 200px;">
+                                    </div>
+                                    <div class="thumb-info-caption">
+                                        <div class="thumb-info-caption-text">
+                                            <h5 class="text-uppercase mb-1">Project Title</h5>
+                                            <p class="py-0 pe-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6">
+
+                                <h5 class="text-uppercase mt-4 text-end">Side Image Right</h5>
+                                <div class="thumb-info thumb-info-side-image thumb-info-side-image-right thumb-info-no-zoom">
+                                    <div class="thumb-info-caption">
+                                        <div class="thumb-info-caption-text text-end">
+                                            <h5 class="text-uppercase mb-1">Project Title</h5>
+                                            <p class="py-0 ps-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                        </div>
+                                    </div>
+                                    <div class="thumb-info-side-image-wrapper">
+                                        <img src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" class="img-fluid" alt="" style="width: 200px;">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <hr class="solid my-5">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+
+                        <h4 class="mb-0">Grid</h4>
+
+                        <div class="content-grid mt-4 mb-4">
+                            <div class="row content-grid-row">
+                                <div class="content-grid-item col-lg-3 text-center">
+                                    <div class="p-4">
+                                        <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="content-grid-item col-lg-3 text-center">
+                                    <div class="p-4">
+                                        <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="content-grid-item col-lg-3 text-center">
+                                    <div class="p-4">
+                                        <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="content-grid-item col-lg-3 text-center">
+                                    <div class="p-4">
+                                        <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row content-grid-row">
+                                <div class="content-grid-item col-lg-3 text-center">
+                                    <div class="p-4">
+                                        <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="content-grid-item col-lg-3 text-center">
+                                    <div class="p-4">
+                                        <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="content-grid-item col-lg-3 text-center">
+                                    <div class="p-4">
+                                        <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="content-grid-item col-lg-3 text-center">
+                                    <div class="p-4">
+                                        <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="solid my-5">
+
+                        <h4 class="mt-5 mb-0">Grid Dashed</h4>
+
+                        <div class="content-grid content-grid-dashed mt-5 mb-4">
+                            <div class="row content-grid-row">
+                                <div class="content-grid-item col-lg-4 text-center">
+                                    <div class="p-4">
+                                        <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="content-grid-item col-lg-4 text-center">
+                                    <div class="p-4">
+                                        <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="content-grid-item col-lg-4 text-center">
+                                    <div class="p-4">
+                                        <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row content-grid-row">
+                                <div class="content-grid-item col-lg-4 text-center">
+                                    <div class="p-4">
+                                        <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="content-grid-item col-lg-4 text-center">
+                                    <div class="p-4">
+                                        <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="content-grid-item col-lg-4 text-center">
+                                    <div class="p-4">
+                                        <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row content-grid-row">
+                                <div class="content-grid-item col-lg-4 text-center">
+                                    <div class="p-4">
+                                        <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="content-grid-item col-lg-4 text-center">
+                                    <div class="p-4">
+                                        <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="content-grid-item col-lg-4 text-center">
+                                    <div class="p-4">
+                                        <img class="img-fluid" src="/Uploads/78216555-6bcc-4392-81ec-469df75d53ed.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>*@
+    <div id="examples" class="container py-2">
+
+
+        <div class="row mt-5">
+            <div class="col">
+                <div class="heading heading-border heading-middle-border heading-middle-border-center text-center">
+                    <h2>
+
+                        @VipAssistProject.Resources.ResWebsite.lbOur
+                        <span class="title-text pp-primary-title"> @VipAssistProject.Resources.ResWebsite.lbServices</span>
+
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="container">
+
+
+        <div id="examples" class="container py-2">
+
+            <div class="row">
+                <div class="col">
+
+
+
+
+                    <div class="row">
+                        <div class="col">
+
+
+
+                            <div class="row mt-lg-5">
+
+
+                                @foreach (var item in Model.LstServicesWithMedia)
+                                {
+                                    <div class="col-lg-4">
+                                        <h5 style="font-family: 'Open Sans Condensed', sans-serif; text-transform: capitalize;">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.ServiceCategory : item.ServiceCategoryFr)</h5>
+                                        <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
+                                            <span class="thumb-info-wrapper">
+                                                @*<img src="/img/slides/10.jpg" class="img-fluid" alt="">*@
+
+                                                <img src="@string.Format("/Uploads/{0}" , item.Path)" alt="product image">
+
+                                                <span class="thumb-info-title">
+                                                    <span class="thumb-info-inner line-height-1 font-weight-bold text-dark position-relative top-3" style="font-family: 'Open Sans Condensed', sans-serif;">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.TitleEn : item.TitleFr)</span>
+                                                    <span class="thumb-info-type">
+                                                        <a asp-controller="ServiceDetails" asp-action="Test2" asp-route-id="@item.ServiceCategoryId" style="font-family: 'Open Sans Condensed', sans-serif;">@(VipAssistProject.Resources.ResWebsite.Culture.Name == "en" ? item.TitleEn : item.TitleFr)</a>
+                                                        @*<button type="button" class="btn btn-primary btn-with-arrow mb-2" href="#">Primary<span><i class="fas fa-chevron-right"></i></span></button>*@
+                                                    </span>
+                                                </span>
+                                                <span class="thumb-info-action">
+                                                    <a asp-controller="ServiceDetails" asp-action="Test2" asp-route-id="@item.ServiceCategoryId">
+                                                        @*<span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-play-circle text-dark text-dark"></i></span>*@
+                                                        <button type="button" class="btn btn-primary btn-with-arrow mb-2" href="#">@VipAssistProject.Resources.ResWebsite.lbLearn_More<span><i class="fas fa-chevron-right"></i></span></button>
+                                                    </a>
+                                                    @*<a asp-controller="Home" asp-action="Index">
+                                                            <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+                                                        </a>*@
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+
+                                }
+
+
+
+
+
+                                @*<div class="col-lg-4">
+                                        <h5 class="text-uppercase mt-4">Bottom Info Light</h5>
+                                        <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
+                                            <span class="thumb-info-wrapper">
+                                                <img src="/img/slides/10.jpg" class="img-fluid" alt="">
+                                                <span class="thumb-info-title">
+                                                    <span class="thumb-info-inner line-height-1 font-weight-bold text-dark position-relative top-3">Project Title</span>
+                                                    <span class="thumb-info-type">Project Type</span>
+                                                </span>
+                                                <span class="thumb-info-action">
+                                                    <a href="#">
+                                                        <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-play-circle text-dark text-dark"></i></span>
+                                                    </a>
+                                                    <a href="portfolio-single-wide-slider.html">
+                                                        <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+                                                    </a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h5 class="text-uppercase mt-4">Bottom Info Light</h5>
+                                        <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
+                                            <span class="thumb-info-wrapper">
+                                                <img src="/img/slides/10.jpg" class="img-fluid" alt="">
+                                                <span class="thumb-info-title">
+                                                    <span class="thumb-info-inner line-height-1 font-weight-bold text-dark position-relative top-3">Project Title</span>
+                                                    <span class="thumb-info-type">Project Type</span>
+                                                </span>
+                                                <span class="thumb-info-action">
+                                                    <a href="#">
+                                                        <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-play-circle text-dark text-dark"></i></span>
+                                                    </a>
+                                                    <a href="portfolio-single-wide-slider.html">
+                                                        <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+                                                    </a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h5 class="text-uppercase mt-4">Bottom Info Light</h5>
+                                        <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
+                                            <span class="thumb-info-wrapper">
+                                                <img src="/img/slides/2.jpg" class="img-fluid" alt="">
+                                                <span class="thumb-info-title">
+                                                    <span class="thumb-info-inner line-height-1 font-weight-bold text-dark position-relative top-3">Project Title</span>
+                                                    <span class="thumb-info-type">Project Type</span>
+                                                </span>
+                                                <span class="thumb-info-action">
+                                                    <a href="#">
+                                                        <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-play-circle text-dark text-dark"></i></span>
+                                                    </a>
+                                                    <a href="portfolio-single-wide-slider.html">
+                                                        <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+                                                    </a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h5 class="text-uppercase mt-4">Bottom Info Light</h5>
+                                        <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
+                                            <span class="thumb-info-wrapper">
+                                                <img src="/img/slides/10.jpg" class="img-fluid" alt="">
+                                                <span class="thumb-info-title">
+                                                    <span class="thumb-info-inner line-height-1 font-weight-bold text-dark position-relative top-3">Project Title</span>
+                                                    <span class="thumb-info-type">Project Type</span>
+                                                </span>
+                                                <span class="thumb-info-action">
+                                                    <a href="#">
+                                                        <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-play-circle text-dark text-dark"></i></span>
+                                                    </a>
+                                                    <a href="portfolio-single-wide-slider.html">
+                                                        <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+                                                    </a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h5 class="text-uppercase mt-4">Bottom Info Light</h5>
+                                        <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
+                                            <span class="thumb-info-wrapper">
+                                                <img src="/img/slides/10.jpg" class="img-fluid" alt="">
+                                                <span class="thumb-info-title">
+                                                    <span class="thumb-info-inner line-height-1 font-weight-bold text-dark position-relative top-3">Project Title</span>
+                                                    <span class="thumb-info-type">Project Type</span>
+                                                </span>
+                                                <span class="thumb-info-action">
+                                                    <a href="#">
+                                                        <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-play-circle text-dark text-dark"></i></span>
+                                                    </a>
+                                                    <a href="portfolio-single-wide-slider.html">
+                                                        <span class="thumb-info-action-icon thumb-info-action-icon-light"><i class="fas fa-plus text-dark"></i></span>
+                                                    </a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>*@
+
+
+
+
+
+
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="row text-center pt-3">
+            <div class="col-md-10 mx-md-auto">
+                <h1 class="word-rotator slide font-weight-bold text-8 mb-3 appear-animation" data-appear-animation="fadeInUpShorter">
+                    <span>AccoladeConcierge has </span>
+                    <span class="word-rotator-words bg-dark">
+                        <b class="is-visible">@VipAssistProject.Resources.ResWebsite.lbincredibly</b>
+                        <b>@VipAssistProject.Resources.ResWebsite.lbespecially</b>
+                        <b>@VipAssistProject.Resources.ResWebsite.lbextremely</b>
+                    </span>
+                    <span> @VipAssistProject.Resources.ResWebsite.lbcustomer_experience</span>
+                </h1>
+                <p class="lead appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300" style="font-family: 'Poppins', sans-serif; line-height: 1.6; ">
+                    @VipAssistProject.Resources.ResWebsite.lbWeprovide
+
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
+        <div class="home-concept mt-5">
+            <div class="container">
+
+                <div class="row text-center">
+                    <span class="sun"></span>
+                    <span class="cloud"></span>
+                    <div class="col-lg-2 ms-lg-auto">
+                        <div class="process-image">
+                            <img src="img/slides/greet2.jpg" alt="" />
+                            <strong>@VipAssistProject.Resources.ResWebsite.lbGreetings</strong>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="process-image process-image-on-middle">
+                            <img src="img/slides/paper.jpg" alt="" />
+                            <strong>@VipAssistProject.Resources.ResWebsite.lbDocuments</strong>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="process-image">
+                            <img src="img/slides/bugg.jpg" alt="" />
+                            <strong>@VipAssistProject.Resources.ResWebsite.lbBuggy</strong>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 ms-lg-auto">
+                        <div class="project-image">
+                            <div id="fcSlideshow" class="fc-slideshow">
+                                <ul class="fc-slides">
+                                    <li><a href="portfolio-single-wide-slider.html"><img class="img-fluid" src="img/slides/car.jpg" alt="" /></a></li>
+                                    <li><a href="portfolio-single-wide-slider.html"><img class="img-fluid" src="img/slides/car.jpg" alt="" /></a></li>
+                                    <li><a href="portfolio-single-wide-slider.html"><img class="img-fluid" src="img/slides/car.jpg" alt="" /></a></li>
+                                </ul>
+                            </div>
+                            <strong class="our-work">@VipAssistProject.Resources.ResWebsite.lbTransportation</strong>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5 pb-4">
+
+        <div class="row">
+            <div class="col mb-4">
+                <hr class="my-5">
+            </div>
+        </div>
+
+        <!--<div class="row pb-3">
+            <div class="col-lg-8">
+                <h2 class="font-weight-normal text-7"> @VipAssistProject.Resources.ResWebsite.lbOur <strong class="font-weight-extra-bold"> @VipAssistProject.Resources.ResWebsite.lbFeatures</strong></h2>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="feature-box feature-box-style-2">
+                            <div class="feature-box-icon">
+                                <i class="icons icon-support text-color-primary"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <h4 class="font-weight-bold text-4-5 mb-1">Customer Support</h4>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa</p>
+                            </div>
+                        </div>
+                        <div class="feature-box feature-box-style-2">
+                            <div class="feature-box-icon">
+                                <i class="icons icon-doc text-color-primary"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <h4 class="font-weight-bold text-4-5 mb-1">HTML5 / CSS3 / JS</h4>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa</p>
+                            </div>
+                        </div>
+                        <div class="feature-box feature-box-style-2">
+                            <div class="feature-box-icon">
+                                <i class="icons icon-social-google text-color-primary"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <h4 class="font-weight-bold text-4-5 mb-1">500+ Google Fonts</h4>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa</p>
+                            </div>
+                        </div>
+                        <div class="feature-box feature-box-style-2">
+                            <div class="feature-box-icon">
+                                <i class="icons icon-pencil text-color-primary"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <h4 class="font-weight-bold text-4-5 mb-1">Colors</h4>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="feature-box feature-box-style-2">
+                            <div class="feature-box-icon">
+                                <i class="icons icon-layers text-color-primary"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <h4 class="font-weight-bold text-4-5 mb-1">Sliders</h4>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa</p>
+                            </div>
+                        </div>
+                        <div class="feature-box feature-box-style-2">
+                            <div class="feature-box-icon">
+                                <i class="icons icon-user text-color-primary"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <h4 class="font-weight-bold text-4-5 mb-1">Icons</h4>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa</p>
+                            </div>
+                        </div>
+                        <div class="feature-box feature-box-style-2">
+                            <div class="feature-box-icon">
+                                <i class="icons icon-menu text-color-primary"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <h4 class="font-weight-bold text-4-5 mb-1">Buttons</h4>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa</p>
+                            </div>
+                        </div>
+                        <div class="feature-box feature-box-style-2">
+                            <div class="feature-box-icon">
+                                <i class="icons icon-screen-desktop text-color-primary"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <h4 class="font-weight-bold text-4-5 mb-1">Lightbox</h4>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        @*<div class="col-lg-4">
+        <h2 class="font-weight-normal text-6"> @VipAssistProject.Resources.ResWebsite.lbAnd_More...</h2>
+
+        <div class="accordion accordion-modern" id="accordion">
+        <div class="card card-default">
+        <div class="card-header">
+        <h4 class="card-title m-0">
+        <a class="accordion-toggle text-color-dark font-weight-bold" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapseOne">
+        <i class="icons icon-diamond text-color-primary"></i>
+        Creative Websites
+        </a>
+        </h4>
+        </div>
+        <div id="collapseOne" class="collapse show">
+        <div class="card-body text-2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blanorem ipsum dolor sit amet, consecte.</p>
+        <p class="mb-0">Adipiscing elit phasellus blanit ma... <a href="#" class="d-block text-color-dark font-weight-semibold pt-4">read more <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a></p>
+        </div>
+        </div>
+        </div>
+        <div class="card card-default">
+        <div class="card-header">
+        <h4 class="card-title m-0">
+        <a class="accordion-toggle text-color-dark font-weight-bold" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapseTwo">
+        <i class="icons icon-bubble text-color-primary"></i>
+        Contact Forms
+        </a>
+        </h4>
+        </div>
+        <div id="collapseTwo" class="collapse">
+        <div class="card-body text-2">
+        <p class="mb-0">Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.</p>
+        </div>
+        </div>
+        </div>
+        <div class="card card-default">
+        <div class="card-header">
+        <h4 class="card-title m-0">
+        <a class="accordion-toggle text-color-dark font-weight-bold" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapseThree">
+        <i class="icons icon-grid text-color-primary"></i>
+        Portfolio Pages
+        </a>
+        </h4>
+        </div>
+        <div id="collapseThree" class="collapse">
+        <div class="card-body text-2">
+        <p class="mb-0">Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.</p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>*@
+        <!--</div>-->
+
+        <hr class="solid my-5">
+
+        <div class="row text-center pt-4">
+            <div class="col">
+                <h2 class="word-rotator slide font-weight-bold text-8 mb-2">
+                    <span style="font-family: 'Open Sans Condensed', sans-serif;">@VipAssistProject.Resources.ResWebsite.lbWe_renot </span>
+                    <span class="word-rotator-words bg-primary">
+                        <b style="font-family: 'Open Sans Condensed', sans-serif;" class="is-visible">ebsite.lbexcited</b>
+                        <b style="font-family: 'Open Sans Condensed', sans-serif;">@VipAssistProject.Resources.ResWebsite.lbhappy</b>
+                    </span>
+                    <span style="font-family: 'Open Sans Condensed', sans-serif;"> @VipAssistProject.Resources.ResWebsite.lbaboutAccolade...</span>
+                </h2>
+                <h4 style="font-family: 'Open Sans Condensed', sans-serif;" class="text-primary lead tall text-4">@VipAssistProject.Resources.ResWebsite.lbOver1000</h4>
+            </div>
+        </div>
+
+        @*<div class="row text-center mt-5">
+                <div class="owl-carousel owl-theme carousel-center-active-item" data-plugin-options="{'responsive': {'0': {'items': 1}, '476': {'items': 1}, '768': {'items': 5}, '992': {'items': 7}, '1200': {'items': 7}}, 'autoplay': true, 'autoplayTimeout': 3000, 'dots': false}">
+                    <div>
+                        <img class="img-fluid" src="img/logos/logo-1.png" alt="">
+                    </div>
+                    <div>
+                        <img class="img-fluid" src="img/logos/logo-2.png" alt="">
+                    </div>
+                    <div>
+                        <img class="img-fluid" src="img/logos/logo-3.png" alt="">
+                    </div>
+                    <div>
+                        <img class="img-fluid" src="img/logos/logo-4.png" alt="">
+                    </div>
+                    <div>
+                        <img class="img-fluid" src="img/logos/logo-5.png" alt="">
+                    </div>
+                    <div>
+                        <img class="img-fluid" src="img/logos/logo-6.png" alt="">
+                    </div>
+                    <div>
+                        <img class="img-fluid" src="img/logos/logo-4.png" alt="">
+                    </div>
+                    <div>
+                        <img class="img-fluid" src="img/logos/logo-2.png" alt="">
+                    </div>
+                </div>
+            </div>*@
+
+    </div>
+
+    <section class="section section-custom-map appear-animation lazyload" data-appear-animation="fadeInUpShorter" data-src-bg="img/map.png" style="background-color: transparent; background-position: center 0; background-repeat: no-repeat;">
+        <section class="section section-default section-footer">
+            <div class="container">
+                <div class="row mt-5 appear-animation" data-appear-animation="fadeInUpShorter">
+                    <div class="col-lg-6">
+                        <div class="recent-posts mb-5">
+                            <h2 class="font-weight-normal text-6 mb-4"><strong class="font-weight-extra-bold">@VipAssistProject.Resources.ResWebsite.lbLatest</strong> @VipAssistProject.Resources.ResWebsite.lbPosts</h2>
+                            <div class="owl-carousel owl-theme dots-title mb-0" data-plugin-options="{'items': 1, 'autoHeight': true, 'autoplay': true, 'autoplayTimeout': 8000}">
+                                <div class="row">
+                                    <div class="col-lg-6 mb-4 mb-lg-0">
+                                        <article>
+                                            <div class="row">
+                                                <div class="col-auto pe-0">
+                                                    <div class="date">
+                                                        <span class="day font-weight-extra-bold">15</span>
+                                                        <span class="month text-1">JAN</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col ps-1">
+                                                    <h4 class="text-primary text-4"><a class="d-block" href="blog-post.html">Lorem ipsum dolor sit amet, consectetur</a></h4>
+                                                    <p class="pe-4 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    <a href="/" class="read-more text-color-dark font-weight-semibold text-2">read more <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <article>
+                                            <div class="row">
+                                                <div class="col-auto pe-0">
+                                                    <div class="date">
+                                                        <span class="day font-weight-extra-bold">14</span>
+                                                        <span class="month text-1">JAN</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col ps-1">
+                                                    <h4 class="text-primary text-4"><a class="d-block" href="blog-post.html">Lorem ipsum dolor sit amet, consectetur</a></h4>
+                                                    <p class="pe-4 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    <a href="/" class="read-more text-color-dark font-weight-semibold text-2">read more <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 mb-4 mb-lg-0">
+                                        <article>
+                                            <div class="row">
+                                                <div class="col-auto pe-0">
+                                                    <div class="date">
+                                                        <span class="day font-weight-extra-bold">13</span>
+                                                        <span class="month text-1">JAN</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col ps-1">
+                                                    <h4 class="text-primary text-4"><a class="d-block" href="blog-post.html">Lorem ipsum dolor sit amet, consectetur</a></h4>
+                                                    <p class="pe-4 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    <a href="/" class="read-more text-color-dark font-weight-semibold text-2">read more <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <article>
+                                            <div class="row">
+                                                <div class="col-auto pe-0">
+                                                    <div class="date">
+                                                        <span class="day font-weight-extra-bold">12</span>
+                                                        <span class="month text-1">JAN</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col ps-1">
+                                                    <h4 class="text-primary text-4"><a class="d-block" href="blog-post.html">Lorem ipsum dolor sit amet, consectetur</a></h4>
+                                                    <p class="pe-4 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    <a href="/" class="read-more text-color-dark font-weight-semibold text-2">read more <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 mb-4 mb-lg-0">
+                                        <article>
+                                            <div class="row">
+                                                <div class="col-auto pe-0">
+                                                    <div class="date">
+                                                        <span class="day font-weight-extra-bold">11</span>
+                                                        <span class="month text-1">JAN</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col ps-1">
+                                                    <h4 class="text-primary text-4"><a href="blog-post.html">Lorem ipsum dolor sit amet, consectetur</a></h4>
+                                                    <p class="pe-4 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    <a href="/" class="read-more text-color-dark font-weight-semibold text-2">read more <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <article>
+                                            <div class="row">
+                                                <div class="col-auto pe-0">
+                                                    <div class="date">
+                                                        <span class="day font-weight-extra-bold">10</span>
+                                                        <span class="month text-1">JAN</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col ps-1">
+                                                    <h4 class="text-primary text-4"><a href="blog-post.html">Lorem ipsum dolor sit amet, consectetur</a></h4>
+                                                    <p class="pe-4 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    <a href="/" class="read-more text-color-dark font-weight-semibold text-2">read more <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="font-weight-normal text-6 mb-4"><strong class="font-weight-extra-bold"> @VipAssistProject.Resources.ResWebsite.lbWhat</strong>  @VipAssistProject.Resources.ResWebsite.lbClient_Say</h2>
+                        <div class="row">
+                            <div class="owl-carousel owl-theme dots-title dots-title-pos-2 mb-0" data-plugin-options="{'items': 1, 'autoHeight': true}">
+                                <div>
+                                    <div class="col">
+                                        <div class="testimonial testimonial-primary">
+                                            <blockquote>
+                                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.</p>
+                                            </blockquote>
+                                            <div class="testimonial-arrow-down"></div>
+                                            <div class="testimonial-author">
+                                                <div class="testimonial-author-thumbnail">
+                                                    <img src="img/clients/client-1.jpg" class="rounded-circle" alt="" />
+                                                </div>
+                                                <p><strong>John Doe</strong><span>Okler</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="col">
+                                        <div class="testimonial testimonial-primary">
+                                            <blockquote>
+                                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.</p>
+                                            </blockquote>
+                                            <div class="testimonial-arrow-down"></div>
+                                            <div class="testimonial-author">
+                                                <div class="testimonial-author-thumbnail">
+                                                    <img src="img/clients/client-1.jpg" class="rounded-circle" alt="" />
+                                                </div>
+                                                <p><strong>John Doe</strong><span>Okler</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>
+
+
+

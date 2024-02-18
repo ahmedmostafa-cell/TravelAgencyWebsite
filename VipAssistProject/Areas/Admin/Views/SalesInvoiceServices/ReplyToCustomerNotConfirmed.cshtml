@@ -1,0 +1,368 @@
+﻿
+
+<div class="toast-bs-container">
+    <div class="toast-position">
+        <div class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
+            <div class="toast-header">
+                <img src="../../../app-assets/images/logo/logo.png" class="rounded mr-2" alt="Toast Image">
+                <strong class="mr-auto">Vue Admin</strong>
+                <small class="text-muted">2 seconds ago</small>
+                <button type="button" class="ml-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                Heads up, toasts will stack automatically
+            </div>
+        </div><div class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
+            <div class="toast-header">
+                <img src="../../../app-assets/images/logo/logo.png" class="rounded mr-2" alt="Toast image">
+                <strong class="mr-auto">Vue Admin</strong>
+                <small>11 mins ago</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                Hello, world! This is a toast message.
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BEGIN: Content-->
+<div class="app-content content">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+            <div class="content-header-left col-md-9 col-12 mb-2">
+                <div class="row breadcrumbs-top">
+                    <div class="col-12">
+                        <h2 class="content-header-title float-left mb-0">Form Layouts</h2>
+                        <div class="breadcrumb-wrapper col-12">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="#">Forms</a>
+                                </li>
+                                <li class="breadcrumb-item active">
+                                    <a href="#">Form Layouts</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
+                <div class="form-group breadcrum-right">
+                    <div class="dropdown">
+                        <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="feather icon-settings"></i></button>
+                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Chat</a><a class="dropdown-item" href="#">Email</a><a class="dropdown-item" href="#">Calendar</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-body">
+            <!-- Basic Horizontal form layout section start -->
+            <section id="basic-horizontal-layouts">
+                <div class="row match-height">
+                    <div class="col-md-12 col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Horizontal Form</h4>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <form enctype="multipart/form-data" method="post" role="form" asp-controller="SalesInvoiceServices" asp-action="ReplyToCustomerWithMessage" class="form form-horizontal">
+                                        <div class="form-body">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-3">
+
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <textarea name="Comment" class="form-control" placeholder="Comment On Booking"></textarea>
+                                                            
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                           
+                                                            <input name="CustomerEmail" value="@ViewBag.CustomerEmail" class="form-control" />
+                                                        </div>
+                                                        @*<div class="col-md-3">
+            <span>Category</span>
+        </div>
+        <div class="col-md-3">
+            <select asp-for="CategoryId" asp-items="@(new SelectList(ViewBag.Categories,"CategoryId","CategoryName"))" class="form-control" placeholder="Category"></select>
+        </div>*@
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-4">
+                                                            @*<span>TitleAr</span>*@
+                                                        </div>
+                                                        <div class="col-md-8"
+                                                            <input name="CustomerEmail" value="ahmed" type="text" class="form-control" placeholder="TitleAr">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                @*<div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-4">
+                                                            <span>TitleEn</span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input asp-for="TitleEn" type="text" class="form-control" placeholder="TitleEn">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-4">
+                                                            <span>TitleFr</span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input asp-for="TitleFr" type="text" class="form-control" placeholder="TitleFr">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-4">
+                                                            <span>Price</span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input asp-for="Price" type="number" class="form-control" placeholder="Price">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-4">
+                                                            <span>BookingPrice</span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input asp-for="BookingPrice" type="number" class="form-control" placeholder="BookingPrice">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-4">
+                                                            <span>ServiceCategory</span>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <select class="form-control" asp-for="ServiceCategoryId" asp-items="@(new SelectList(ViewBag.Categories , "ServiceCategoryId" , "TitleEn"))"></select>
+                                                        </div>
+                                                    </div>
+                                                </div>*@
+
+                                                @*<div class="col-12">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-4">
+                                                                <span>SalePrice</span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input asp-for="SalesPrice" type="number" class="form-control" placeholder="SalePrice">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-4">
+                                                                <span>Image Name</span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input name="files" type="file" class="form-control" placeholder="Image Name">
+                                                            </div>
+                                                        </div>
+                                                    </div>*@
+                                                <div class="form-group col-md-8 offset-md-4">
+                                                    <fieldset class="checkbox">
+                                                        <div class="vs-checkbox-con vs-checkbox-primary">
+                                                            @*<input type="checkbox">*@
+                                                            @*<span class="vs-checkbox">
+                                                                <span class="vs-checkbox--check">
+                                                                    <i class="vs-icon feather icon-check"></i>
+                                                                </span>
+                                                            </span>*@
+                                                            @*<span class="">Remember me</span>*@
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-md-8 offset-md-4">
+                                                    <button id="BUTTON" type="submit" class="btn btn-outline-info placement mt-2 waves-effect waves-light">Submit</button>
+                                                    @*<button type="reset" class="btn btn-outline-warning mr-1 mb-1">Reset</button>*@
+
+                                                    @*<div class="btn btn-outline-info placement mt-2 waves-effect waves-light">Toast Placement</div>*@
+                                                    <div aria-live="polite" aria-atomic="true" class="toast-placement d-flex justify-content-center align-items-center fade show" data-autohide="false">
+                                                        <div class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+                                                            <div class="toast-header">
+                                                                <img src="../../../app-assets/images/logo/logo.png" class="rounded mr-2" alt="Toast Image">
+                                                                <strong class="mr-auto">Vue Admin</strong>
+                                                                <small>1 mins ago</small>
+                                                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                                                    <span aria-hidden="true">×</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="toast-body">
+                                                                Hello, world! This is a toast message.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    @*<button type="button">click</button>*@
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*<div class="col-md-6 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Horizontal Form with Icons</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-4">
+                                                                <span>First Name</span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <div class="position-relative has-icon-left">
+                                                                    <input type="text" id="fname-icon" class="form-control" name="fname-icon" placeholder="First Name">
+                                                                    <div class="form-control-position">
+                                                                        <i class="feather icon-user"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-4">
+                                                                <span>Email</span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <div class="position-relative has-icon-left">
+                                                                    <input type="email" id="email-icon" class="form-control" name="email-id-icon" placeholder="Email">
+                                                                    <div class="form-control-position">
+                                                                        <i class="feather icon-mail"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-4">
+                                                                <span>Mobile</span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <div class="position-relative has-icon-left">
+                                                                    <input type="number" id="contact-icon" class="form-control" name="contact-icon" placeholder="Mobile">
+                                                                    <div class="form-control-position">
+                                                                        <i class="feather icon-smartphone"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-4">
+                                                                <span>Password</span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <div class="position-relative has-icon-left">
+                                                                    <input type="password" id="pass-icon" class="form-control" name="contact-icon" placeholder="Password">
+                                                                    <div class="form-control-position">
+                                                                        <i class="feather icon-lock"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-md-8 offset-md-4">
+                                                        <fieldset class="checkbox">
+                                                            <div class="vs-checkbox-con vs-checkbox-primary">
+                                                                <input type="checkbox">
+                                                                <span class="vs-checkbox">
+                                                                    <span class="vs-checkbox--check">
+                                                                        <i class="vs-icon feather icon-check"></i>
+                                                                    </span>
+                                                                </span>
+                                                                <span class="">Remember me</span>
+                                                            </div>
+                                                        </fieldset>
+                                                    </div>
+                                                    <div class="col-md-8 offset-md-4">
+                                                        <button type="submit" class="btn btn-primary mr-1 mb-1">Submit</button>
+                                                        <button type="reset" class="btn btn-outline-warning mr-1 mb-1">Reset</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+                </div>
+            </section>
+            <!-- // Basic Horizontal form layout section end -->
+
+
+        </div>
+    </div>
+</div>
+<!-- END: Content-->
+
+<div class="sidenav-overlay"></div>
+<div class="drag-target"></div>
+
+@section scripts
+{
+    <script src="~/Admin/app-assets/jquery-3.2.1.min.js"></script>
+    <script src="~/Admin/app-assets/toastr.min.js"></script>
+
+    <script>
+        $('#BUTTON').on('click', function () {
+
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-center",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+
+            timeout(toastr['info']('your message'), 2000);
+        })
+    </script>
+
+}

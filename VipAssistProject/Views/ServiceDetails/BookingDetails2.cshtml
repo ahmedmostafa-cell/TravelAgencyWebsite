@@ -1,0 +1,184 @@
+﻿<div class="tab-pane tab-pane-navigation active" id="formsStyleSquaredBorders">
+    <h4 class="mb-3" style="margin-left:20px;">Enter Your Flight Numbers</h4>
+    
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
+                    <form class="contact-form form-squared-borders" asp-controller="ServiceDetails" asp-action="AddToCart" method="POST" role="form" novalidate="novalidate">
+                        <div class="contact-form-success alert alert-success d-none mt-4">
+                            <strong>Success!</strong> Your message has been sent to us.
+                        </div>
+
+                        <div class="contact-form-error alert alert-danger d-none mt-4">
+                            <strong>Error!</strong> There was an error sending your message.
+                            <span class="mail-error-message text-1 d-block"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-lg-6">
+                                <label style="color:white;" class="form-label mb-1 text-2">Flight Date</label>
+                                <input style="background-color:white;" type="date" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control text-3 h-auto py-2" name="FlightDate" required="">
+                                <input type="hidden" value="@ViewBag.ServiceId" class="form-control text-3 h-auto py-2" name="id">
+                                <input type="hidden" value="@ViewBag.FlightStatus" name="FlightStatus">
+                                <input type="hidden" value="@ViewBag.CarName" name="CarName">
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-lg-6">
+                                <label style="color:white;" class="form-label mb-1 text-2">Enter Your Flight  Name</label>
+                                <input style="background-color:white;" type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control text-3 h-auto py-2" name="FlightName" required="">
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <h4 class="mb-3" style="margin-left:20px;">How Many Guests Will Be Travelling?</h4>
+                            <h4 class="mb-3" style="margin-left:20px;">Please Enter The Number Of People Will Be Travelling.</h4>
+                            <div class="form-group col-lg-6">
+                                <div style="position:absolute; left:150px;" class="quantity float-none m-0">
+                                    <div class="col-lg-3">
+                                        <img class="img-fluid rounded-circle mb-4" src="~/Uploads/persons.jpg" alt="Project Image">
+                                    </div>
+                                    <input type="button" class="minus text-color-hover-light bg-color-hover-primary border-color-hover-primary" value="-">
+                                    <input style="width:30px; text-align:center;" type="text" class="input-text qty text" title="Qty" value="1" name="PersonQty" min="1" step="1">
+                                    <input type="button" class="plus text-color-hover-light bg-color-hover-primary border-color-hover-primary" value="+">
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <div class="row">
+                            <h4 class="mb-3" style="margin-left:20px;">How Many Guests Will Be Travelling?</h4>
+                            <h4 class="mb-3" style="margin-left:20px;">Please Enter The Number Of infants Will Be Travelling.</h4>
+                            <div class="form-group col-lg-6">
+                                <div style="position:absolute; left:150px;" class="quantity float-none m-0">
+                                    <div class="col-lg-3">
+                                        <img class="img-fluid rounded-circle mb-4" src="~/Uploads/infants.png" alt="Project Image">
+                                    </div>
+                                    <input type="button" class="minus text-color-hover-light bg-color-hover-primary border-color-hover-primary" value="-">
+                                    <input style="width:30px; text-align:center;" type="text" class="input-text qty text" title="Qty" value="0" name="InfantQty" min="0" step="1">
+                                    <input type="button" class="plus text-color-hover-light bg-color-hover-primary border-color-hover-primary" value="+">
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <h4 class="mb-3" style="margin-left:20px;">How Many Bags Will You Be In Checking In?</h4>
+                        <h4 class="mb-3" style="margin-left:20px;">Please Note This Does Not Include Hand Luggage.</h4>
+                        <div class="form-group col-lg-6">
+                            <div style="position:absolute; left:150px;" class="quantity float-none m-0">
+                                <div class="col-lg-3">
+                                    <img class="img-fluid rounded-circle mb-4" src="~/Uploads/bag.png" alt="Project Image">
+                                </div>
+                                <input type="button" class="minus text-color-hover-light bg-color-hover-primary border-color-hover-primary" value="-">
+                                <input style="width:30px; text-align:center;" type="text" class="input-text qty text" title="Qty" value="0" name="BagQty" min="0" step="1">
+                                <input type="button" class="plus text-color-hover-light bg-color-hover-primary border-color-hover-primary" value="+">
+
+
+
+                            </div>
+
+                        </div>
+
+                        @*<div class="row">
+            <div class="form-group col">
+                <label class="form-label">City</label>
+                <div class="custom-select-1">
+                    <select class="form-select form-control h-auto py-2" data-msg-required="Please select a city." name="city" required="">
+                        <option value="">Choose...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <label class="form-label mb-1 text-2">Subject</label>
+                <input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control text-3 h-auto py-2" name="subject" required="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="radios" data-msg-required="Please select at least one option." id="tabContent19Radio1" value="option1" required=""> Option 1
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="radios" data-msg-required="Please select at least one option." id="tabContent19Radio2" value="option2" required=""> Option 2
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="radios" data-msg-required="Please select at least one option." id="tabContent19Radio3" value="option3" required=""> Option 3
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <label class="form-label mb-1 text-2">Message</label>
+                <textarea maxlength="5000" data-msg-required="Please enter your message." rows="8" class="form-control text-3 h-auto py-2" name="message" required=""></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" name="agree" id="tabContent19Checkbox" data-msg-required="You must agree before submiting." required="">
+                    <label class="form-check-label" for="tabContentCheckbox">
+                        Agree to terms and conditions
+                    </label>
+                </div>
+            </div>
+        </div>*@
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <div class="row">
+                            <div class="form-group col">
+                                <input type="submit" value="Submit Form" class="btn btn-primary" data-loading-text="Loading...">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
