@@ -42,5 +42,5 @@ We welcome code contributions from the community. To contribute code, please fol
 2. Clone your forked repository to your local machine.
 
    ```bash
-   git clone https://github.com/ahmedmostafa-cell/VoiceOverProtofolioWebsite.git
+   git clone https://github.com/ahmedmostafa-cell/TravelAgencyWebsite.git
 
